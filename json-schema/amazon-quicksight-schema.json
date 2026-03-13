@@ -1,0 +1,302 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.apievangelist.com/amazon-quicksight/dashboard-definition",
+  "title": "Amazon QuickSight Dashboard Definition",
+  "description": "Schema defining the structure of an Amazon QuickSight dashboard resource, including datasets, data sources, analyses, visuals, and embedding configurations for business intelligence.",
+  "type": "object",
+  "required": [
+    "DashboardId",
+    "Name"
+  ],
+  "properties": {
+    "DashboardId": {
+      "type": "string",
+      "description": "The unique identifier for the dashboard.",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^[\\w\\-]+$"
+    },
+    "Arn": {
+      "type": "string",
+      "description": "The Amazon Resource Name of the dashboard."
+    },
+    "Name": {
+      "type": "string",
+      "description": "The display name of the dashboard.",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "Version": {
+      "$ref": "#/$defs/DashboardVersion"
+    },
+    "CreatedTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time this dashboard was created."
+    },
+    "LastPublishedTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time this dashboard was last published."
+    },
+    "LastUpdatedTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time this dashboard was last updated."
+    }
+  },
+  "$defs": {
+    "DashboardVersion": {
+      "type": "object",
+      "description": "A version of a dashboard.",
+      "properties": {
+        "VersionNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The version number of the dashboard."
+        },
+        "Status": {
+          "type": "string",
+          "enum": [
+            "CREATION_IN_PROGRESS",
+            "CREATION_SUCCESSFUL",
+            "CREATION_FAILED",
+            "UPDATE_IN_PROGRESS",
+            "UPDATE_SUCCESSFUL",
+            "UPDATE_FAILED",
+            "DELETED"
+          ],
+          "description": "The status of the dashboard version."
+        },
+        "Arn": {
+          "type": "string",
+          "description": "The ARN of the dashboard version."
+        },
+        "SourceEntityArn": {
+          "type": "string",
+          "description": "The source entity ARN (template or analysis) of this version."
+        },
+        "Description": {
+          "type": "string",
+          "description": "Description of the dashboard version.",
+          "maxLength": 512
+        },
+        "CreatedTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "DataSetArns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The ARNs of the datasets associated with this version."
+        },
+        "Sheets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Sheet"
+          },
+          "description": "A list of sheets in the dashboard version."
+        }
+      }
+    },
+    "Sheet": {
+      "type": "object",
+      "description": "A sheet within a dashboard.",
+      "properties": {
+        "SheetId": {
+          "type": "string",
+          "description": "The unique identifier of the sheet."
+        },
+        "Name": {
+          "type": "string",
+          "description": "The name of the sheet."
+        }
+      }
+    },
+    "DataSet": {
+      "type": "object",
+      "description": "A dataset in QuickSight.",
+      "required": [
+        "DataSetId",
+        "Name"
+      ],
+      "properties": {
+        "DataSetId": {
+          "type": "string",
+          "description": "The unique identifier of the dataset."
+        },
+        "Arn": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string",
+          "description": "The display name of the dataset.",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "CreatedTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "LastUpdatedTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "ImportMode": {
+          "type": "string",
+          "enum": [
+            "SPICE",
+            "DIRECT_QUERY"
+          ],
+          "description": "Whether the data is imported into SPICE or queried directly."
+        },
+        "ConsumedSpiceCapacityInBytes": {
+          "type": "integer",
+          "description": "The amount of SPICE capacity consumed by this dataset."
+        },
+        "PhysicalTableMap": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/PhysicalTable"
+          },
+          "description": "Declares the physical tables available in the underlying data sources."
+        },
+        "LogicalTableMap": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/LogicalTable"
+          },
+          "description": "Configures the combination and transformation of the data."
+        }
+      }
+    },
+    "DataSource": {
+      "type": "object",
+      "description": "A data source connection in QuickSight.",
+      "properties": {
+        "DataSourceId": {
+          "type": "string",
+          "description": "The unique identifier of the data source."
+        },
+        "Arn": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string",
+          "description": "The display name of the data source."
+        },
+        "Type": {
+          "type": "string",
+          "enum": [
+            "AMAZON_ELASTICSEARCH",
+            "ATHENA",
+            "AURORA",
+            "AURORA_POSTGRESQL",
+            "MARIADB",
+            "MYSQL",
+            "ORACLE",
+            "POSTGRESQL",
+            "PRESTO",
+            "REDSHIFT",
+            "S3",
+            "SNOWFLAKE",
+            "SPARK",
+            "SQLSERVER",
+            "TERADATA",
+            "TIMESTREAM",
+            "TWITTER",
+            "JIRA",
+            "SERVICENOW",
+            "GITHUB",
+            "EXASOL",
+            "DATABRICKS"
+          ],
+          "description": "The type of the data source."
+        },
+        "Status": {
+          "type": "string",
+          "enum": [
+            "CREATION_IN_PROGRESS",
+            "CREATION_SUCCESSFUL",
+            "CREATION_FAILED",
+            "UPDATE_IN_PROGRESS",
+            "UPDATE_SUCCESSFUL",
+            "UPDATE_FAILED",
+            "DELETED"
+          ]
+        },
+        "CreatedTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "LastUpdatedTime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "PhysicalTable": {
+      "type": "object",
+      "description": "A view of a data source that contains information about the shape of the data.",
+      "properties": {
+        "RelationalTable": {
+          "type": "object",
+          "properties": {
+            "DataSourceArn": { "type": "string" },
+            "Schema": { "type": "string" },
+            "Name": { "type": "string" },
+            "InputColumns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "Name": { "type": "string" },
+                  "Type": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "CustomSql": {
+          "type": "object",
+          "properties": {
+            "DataSourceArn": { "type": "string" },
+            "Name": { "type": "string" },
+            "SqlQuery": { "type": "string" }
+          }
+        },
+        "S3Source": {
+          "type": "object",
+          "properties": {
+            "DataSourceArn": { "type": "string" },
+            "InputColumns": { "type": "array" }
+          }
+        }
+      }
+    },
+    "LogicalTable": {
+      "type": "object",
+      "description": "A logical table that combines and transforms data.",
+      "properties": {
+        "Alias": {
+          "type": "string",
+          "description": "A display name for the logical table."
+        },
+        "DataTransforms": {
+          "type": "array",
+          "description": "Transform operations to apply to the data."
+        },
+        "Source": {
+          "type": "object",
+          "properties": {
+            "JoinInstruction": { "type": "object" },
+            "PhysicalTableId": { "type": "string" },
+            "DataSetArn": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

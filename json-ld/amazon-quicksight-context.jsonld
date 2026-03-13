@@ -1,0 +1,188 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "quicksight": "https://docs.aws.amazon.com/quicksight/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Dashboard": {
+      "@id": "quicksight:API_DescribeDashboard",
+      "@context": {
+        "DashboardId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "Arn": {
+          "@id": "quicksight:dashboardArn",
+          "@type": "xsd:string"
+        },
+        "Name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "Version": {
+          "@id": "quicksight:dashboardVersion",
+          "@type": "quicksight:DashboardVersion"
+        },
+        "CreatedTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "LastPublishedTime": {
+          "@id": "quicksight:lastPublishedTime",
+          "@type": "xsd:dateTime"
+        },
+        "LastUpdatedTime": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "DataSet": {
+      "@id": "quicksight:API_DescribeDataSet",
+      "@context": {
+        "DataSetId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "Arn": {
+          "@id": "quicksight:dataSetArn",
+          "@type": "xsd:string"
+        },
+        "Name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "CreatedTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "LastUpdatedTime": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        },
+        "ImportMode": {
+          "@id": "quicksight:importMode",
+          "@type": "xsd:string"
+        },
+        "ConsumedSpiceCapacityInBytes": {
+          "@id": "quicksight:consumedSpiceCapacity",
+          "@type": "xsd:integer"
+        },
+        "PhysicalTableMap": {
+          "@id": "quicksight:physicalTableMap",
+          "@container": "@index"
+        },
+        "LogicalTableMap": {
+          "@id": "quicksight:logicalTableMap",
+          "@container": "@index"
+        }
+      }
+    },
+
+    "DataSource": {
+      "@id": "quicksight:API_DescribeDataSource",
+      "@context": {
+        "DataSourceId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "Arn": {
+          "@id": "quicksight:dataSourceArn",
+          "@type": "xsd:string"
+        },
+        "Name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "Type": {
+          "@id": "quicksight:dataSourceType",
+          "@type": "xsd:string"
+        },
+        "Status": {
+          "@id": "quicksight:dataSourceStatus",
+          "@type": "xsd:string"
+        },
+        "CreatedTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "LastUpdatedTime": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Analysis": {
+      "@id": "quicksight:API_DescribeAnalysis",
+      "@context": {
+        "AnalysisId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "Arn": {
+          "@id": "quicksight:analysisArn",
+          "@type": "xsd:string"
+        },
+        "Name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "Status": {
+          "@id": "quicksight:analysisStatus",
+          "@type": "xsd:string"
+        },
+        "CreatedTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "LastUpdatedTime": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "DashboardVersion": {
+      "@id": "quicksight:DashboardVersion",
+      "@context": {
+        "VersionNumber": {
+          "@id": "schema:version",
+          "@type": "xsd:integer"
+        },
+        "Status": {
+          "@id": "quicksight:versionStatus",
+          "@type": "xsd:string"
+        },
+        "Arn": {
+          "@id": "quicksight:versionArn",
+          "@type": "xsd:string"
+        },
+        "SourceEntityArn": {
+          "@id": "quicksight:sourceEntityArn",
+          "@type": "xsd:string"
+        },
+        "Description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "CreatedTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "DataSetArns": {
+          "@id": "quicksight:dataSetArns",
+          "@container": "@list"
+        },
+        "Sheets": {
+          "@id": "quicksight:sheets",
+          "@container": "@list"
+        }
+      }
+    }
+  }
+}
