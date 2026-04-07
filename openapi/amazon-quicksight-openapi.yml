@@ -40,14 +40,6 @@ tags:
     description: Operations for creating and managing dashboards
   - name: Datasets
     description: Operations for managing datasets
-  - name: Data Sources
-    description: Operations for managing data source connections
-  - name: Users
-    description: Operations for managing QuickSight users
-  - name: Groups
-    description: Operations for managing user groups
-  - name: Analyses
-    description: Operations for managing analyses
 paths:
   /accounts/{AwsAccountId}/dashboards:
     get:
