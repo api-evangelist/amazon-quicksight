@@ -52,7 +52,7 @@ paths:
   /accounts/{AwsAccountId}/dashboards:
     get:
       operationId: ListDashboards
-      summary: List dashboards
+      summary: Amazon QuickSight List dashboards
       description: Lists dashboards in an AWS account.
       tags:
         - Dashboards
@@ -77,7 +77,7 @@ paths:
   /accounts/{AwsAccountId}/dashboards/{DashboardId}:
     get:
       operationId: DescribeDashboard
-      summary: Describe a dashboard
+      summary: Amazon QuickSight Describe a dashboard
       description: Provides a summary for a dashboard.
       tags:
         - Dashboards
@@ -102,7 +102,7 @@ paths:
   /accounts/{AwsAccountId}/data-sets:
     get:
       operationId: ListDataSets
-      summary: List datasets
+      summary: Amazon QuickSight List datasets
       description: Lists all datasets in the current AWS account.
       tags:
         - Datasets
