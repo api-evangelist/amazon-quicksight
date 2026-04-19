@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/json-structure/amazon-quicksight-openapi-data-set-summary-structure.json",
+  "description": "DataSetSummary schema from openapi",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "type": "string"
+    },
+    "DataSetId": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "CreatedTime": {
+      "type": "datetime"
+    },
+    "LastUpdatedTime": {
+      "type": "datetime"
+    },
+    "ImportMode": {
+      "type": "string",
+      "enum": [
+        "SPICE",
+        "DIRECT_QUERY"
+      ]
+    }
+  },
+  "name": "DataSetSummary"
+}

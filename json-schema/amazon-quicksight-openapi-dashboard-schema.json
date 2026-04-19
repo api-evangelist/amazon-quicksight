@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/json-schema/amazon-quicksight-openapi-dashboard-schema.json",
+  "title": "Dashboard",
+  "description": "Dashboard schema from openapi",
+  "type": "object",
+  "properties": {
+    "DashboardId": {
+      "type": "string"
+    },
+    "Arn": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Version": {
+      "type": "object",
+      "properties": {
+        "VersionNumber": {
+          "type": "integer"
+        },
+        "Status": {
+          "type": "string",
+          "enum": [
+            "CREATION_IN_PROGRESS",
+            "CREATION_SUCCESSFUL",
+            "CREATION_FAILED",
+            "UPDATE_IN_PROGRESS",
+            "UPDATE_SUCCESSFUL",
+            "UPDATE_FAILED"
+          ]
+        },
+        "CreatedTime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "CreatedTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "LastPublishedTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "LastUpdatedTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Quicksight
+  description: Vocabulary for Amazon Quicksight APIs covering operational and capability dimensions
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon Quicksight
+    namespace: amazon-quicksight
+    status: active
+  resources:
+  - name: accounts
+    api: amazon-quicksight-openapi
+    actions:
+    - ListDashboards
+  actions:
+  - name: list
+    httpMethod: GET
+    pattern: read
+  - name: get
+    httpMethod: GET
+    pattern: read
+  schemas:
+    core:
+    - amazon-quicksight-openapi-dashboard
+    - amazon-quicksight-openapi-dashboard-summary
+    - amazon-quicksight-openapi-data-set-summary
+    - amazon-quicksight
+  authentication:
+    schemes:
+    - type: bearer
+      description: AWS Signature V4
+capability:
+  workflows:
+  - name: Amazon Quicksight Operations
+    file: capabilities/amazon-quicksight.yaml
+    description: Automation workflow for Amazon Quicksight
+  personas:
+  - id: cloud-engineer
+    name: Cloud Engineer
+    description: Engineer managing Amazon Quicksight resources
+  domains:
+  - name: Cloud Operations
+    description: AWS cloud resource management
+crossReference:
+- resource: accounts
+  operations:
+  - ListDashboards
+  workflows:
+  - Amazon Quicksight Operations

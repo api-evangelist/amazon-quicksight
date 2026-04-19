@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Dashboard": "aws:Dashboard",
+    "DashboardId": {
+      "@id": "aws:DashboardId",
+      "@type": "xsd:string"
+    },
+    "Arn": {
+      "@id": "aws:Arn",
+      "@type": "xsd:string"
+    },
+    "Name": {
+      "@id": "aws:Name",
+      "@type": "xsd:string"
+    },
+    "Version": {
+      "@id": "aws:Version",
+      "@type": "xsd:string"
+    },
+    "VersionNumber": {
+      "@id": "aws:VersionNumber",
+      "@type": "xsd:integer"
+    },
+    "Status": {
+      "@id": "aws:Status",
+      "@type": "xsd:string"
+    },
+    "CreatedTime": {
+      "@id": "aws:CreatedTime",
+      "@type": "xsd:dateTime"
+    },
+    "LastPublishedTime": {
+      "@id": "aws:LastPublishedTime",
+      "@type": "xsd:dateTime"
+    },
+    "LastUpdatedTime": {
+      "@id": "aws:LastUpdatedTime",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

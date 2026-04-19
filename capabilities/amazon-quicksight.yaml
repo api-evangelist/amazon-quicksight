@@ -1,0 +1,48 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Quicksight Operations
+  description: Workflow capability for Amazon Quicksight. Enables automation of Amazon Quicksight resources for cloud operations teams.
+  tags:
+  - Amazon Quicksight
+  - AWS
+  - Cloud Operations
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY: AWS_ACCESS_KEY
+    AWS_SECRET_KEY: AWS_SECRET_KEY
+capability:
+  consumes:
+  - import: amazon-quicksight
+    location: ./shared/amazon-quicksight.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-quicksight-api
+    description: Unified REST API for Amazon Quicksight operations.
+    resources:
+    - path: /v1/resources
+      name: resources
+      description: Amazon Quicksight resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List Amazon Quicksight resources
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-quicksight-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Quicksight operations.
+    tools:
+    - name: list-amazon-quicksight-resources
+      description: List Amazon Quicksight resources
+      hints:
+        readOnly: true
+      outputParameters:
+      - type: object
+        mapping: $.

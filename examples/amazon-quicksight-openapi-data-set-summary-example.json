@@ -1,0 +1,8 @@
+{
+  "Arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DataSetId": "abc123",
+  "Name": "Example Resource",
+  "CreatedTime": "2026-04-19T00:00:00Z",
+  "LastUpdatedTime": "2026-04-19T00:00:00Z",
+  "ImportMode": "SPICE"
+}

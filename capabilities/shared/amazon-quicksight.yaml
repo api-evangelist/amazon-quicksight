@@ -1,0 +1,55 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon QuickSight API
+  description: >-
+    The Amazon QuickSight API enables programmatic management of
+    QuickSight resources including dashboards, datasets, data sources,
+    analyses, templates, users, and groups. You can also embed analytics
+    into your applications.
+  tags:
+  - Amazon Quicksight
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_QUICKSIGHT_API_KEY: AMAZON_QUICKSIGHT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-quicksight
+    baseUri: https://quicksight.{region}.amazonaws.com
+    description: Amazon QuickSight API
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: accounts
+      path: /accounts/{AwsAccountId}/dashboards
+      description: accounts operations
+      operations:
+      - name: ListDashboards
+        method: GET
+        description: Amazon QuickSight List dashboards
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DescribeDashboard
+        method: GET
+        description: Amazon QuickSight Describe a dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListDataSets
+        method: GET
+        description: Amazon QuickSight List datasets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.

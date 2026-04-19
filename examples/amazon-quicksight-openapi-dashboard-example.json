@@ -1,0 +1,13 @@
+{
+  "DashboardId": "abc123",
+  "Arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "Name": "Example Resource",
+  "Version": {
+    "VersionNumber": 100,
+    "Status": "CREATION_IN_PROGRESS",
+    "CreatedTime": "2026-04-19T00:00:00Z"
+  },
+  "CreatedTime": "2026-04-19T00:00:00Z",
+  "LastPublishedTime": "2026-04-19T00:00:00Z",
+  "LastUpdatedTime": "2026-04-19T00:00:00Z"
+}

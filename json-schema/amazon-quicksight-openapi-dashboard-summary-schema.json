@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/json-schema/amazon-quicksight-openapi-dashboard-summary-schema.json",
+  "title": "DashboardSummary",
+  "description": "DashboardSummary schema from openapi",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "type": "string"
+    },
+    "DashboardId": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "CreatedTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "LastUpdatedTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "PublishedVersionNumber": {
+      "type": "integer"
+    },
+    "LastPublishedTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

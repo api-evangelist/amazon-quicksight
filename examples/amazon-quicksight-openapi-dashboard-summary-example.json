@@ -1,0 +1,9 @@
+{
+  "Arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DashboardId": "abc123",
+  "Name": "Example Resource",
+  "CreatedTime": "2026-04-19T00:00:00Z",
+  "LastUpdatedTime": "2026-04-19T00:00:00Z",
+  "PublishedVersionNumber": 100,
+  "LastPublishedTime": "2026-04-19T00:00:00Z"
+}
