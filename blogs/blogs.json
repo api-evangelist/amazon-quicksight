@@ -1,0 +1,13 @@
+{
+  "repo": "amazon-quicksight",
+  "feeds": [
+    {
+      "source": "https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/",
+      "feed_url": "https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/feed/",
+      "saved": 10,
+      "title": "Amazon Quick Sight \u2013 AWS Business Intelligence Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:21:43Z"
+}
