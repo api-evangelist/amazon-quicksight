@@ -1,13 +1,14 @@
-naftiko: 1.0.0-alpha1
+naftiko: 1.0.0-alpha2
 info:
   label: Amazon Quicksight Operations
-  description: Workflow capability for Amazon Quicksight. Enables automation of Amazon Quicksight resources for cloud operations teams.
+  description: Workflow capability for Amazon Quicksight. Enables automation of Amazon Quicksight resources for cloud operations
+    teams.
   tags:
   - Amazon Quicksight
   - AWS
   - Cloud Operations
   created: '2026-04-19'
-  modified: '2026-04-19'
+  modified: '2026-05-06'
 binds:
 - namespace: env
   keys:
@@ -15,8 +16,42 @@ binds:
     AWS_SECRET_KEY: AWS_SECRET_KEY
 capability:
   consumes:
-  - import: amazon-quicksight
-    location: ./shared/amazon-quicksight.yaml
+  - type: http
+    namespace: amazon-quicksight
+    baseUri: https://quicksight.{region}.amazonaws.com
+    description: Amazon QuickSight API
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: accounts
+      path: /accounts/{AwsAccountId}/dashboards
+      description: accounts operations
+      operations:
+      - name: ListDashboards
+        method: GET
+        description: Amazon QuickSight List dashboards
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DescribeDashboard
+        method: GET
+        description: Amazon QuickSight Describe a dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListDataSets
+        method: GET
+        description: Amazon QuickSight List datasets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
   exposes:
   - type: rest
     port: 8080
