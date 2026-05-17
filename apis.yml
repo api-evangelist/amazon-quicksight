@@ -36,7 +36,7 @@ apis:
     url: https://api.apis.guru/v2/specs/amazonaws.com/quicksight/2018-04-01/openapi.yaml
   - type: JSONSchema
     url: json-schema/amazon-quicksight-schema.json
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/amazon-quicksight-context.jsonld
   - type: Pricing
     url: https://aws.amazon.com/quicksight/pricing/
@@ -89,13 +89,13 @@ common:
   url: https://stackoverflow.com/questions/tagged/amazon-quicksight
 - type: CodeExamples
   url: https://docs.aws.amazon.com/code-library/latest/ug/quicksight_code_examples.html
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-quicksight-openapi-dashboard-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-quicksight-openapi-dashboard-summary-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-quicksight-openapi-data-set-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-quicksight-schema.json-context.jsonld
 - type: JSONSchema
   url: json-schema/amazon-quicksight-openapi-dashboard-schema.json
