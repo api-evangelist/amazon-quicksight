@@ -1,0 +1,128 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon QuickSight API — Dashboards
+  description: 'Amazon QuickSight API — Dashboards. 2 operations. Lead operation: Amazon QuickSight List dashboards. Self-contained
+    Naftiko capability covering one Amazon Quicksight business surface.'
+  tags:
+  - Amazon Quicksight
+  - Dashboards
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_QUICKSIGHT_API_KEY: AMAZON_QUICKSIGHT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-quicksight-dashboards
+    baseUri: https://quicksight.{region}.amazonaws.com
+    description: Amazon QuickSight API — Dashboards business capability. Self-contained, no shared references.
+    resources:
+    - name: accounts-AwsAccountId-dashboards
+      path: /accounts/{AwsAccountId}/dashboards
+      operations:
+      - name: listdashboards
+        method: GET
+        description: Amazon QuickSight List dashboards
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: AwsAccountId
+          in: path
+          type: string
+          required: true
+    - name: accounts-AwsAccountId-dashboards-DashboardId
+      path: /accounts/{AwsAccountId}/dashboards/{DashboardId}
+      operations:
+      - name: describedashboard
+        method: GET
+        description: Amazon QuickSight Describe a dashboard
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: AwsAccountId
+          in: path
+          type: string
+          required: true
+        - name: DashboardId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_QUICKSIGHT_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-quicksight-dashboards-rest
+    port: 8080
+    description: REST adapter for Amazon QuickSight API — Dashboards. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/accounts/{awsaccountid}/dashboards
+      name: accounts-awsaccountid-dashboards
+      description: REST surface for accounts-AwsAccountId-dashboards.
+      operations:
+      - method: GET
+        name: listdashboards
+        description: Amazon QuickSight List dashboards
+        call: amazon-quicksight-dashboards.listdashboards
+        with:
+          AwsAccountId: rest.AwsAccountId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/accounts/{awsaccountid}/dashboards/{dashboardid}
+      name: accounts-awsaccountid-dashboards-dashboardid
+      description: REST surface for accounts-AwsAccountId-dashboards-DashboardId.
+      operations:
+      - method: GET
+        name: describedashboard
+        description: Amazon QuickSight Describe a dashboard
+        call: amazon-quicksight-dashboards.describedashboard
+        with:
+          AwsAccountId: rest.AwsAccountId
+          DashboardId: rest.DashboardId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-quicksight-dashboards-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon QuickSight API — Dashboards. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: amazon-quicksight-list-dashboards
+      description: Amazon QuickSight List dashboards
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-quicksight-dashboards.listdashboards
+      with:
+        AwsAccountId: tools.AwsAccountId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-quicksight-describe-dashboard
+      description: Amazon QuickSight Describe a dashboard
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-quicksight-dashboards.describedashboard
+      with:
+        AwsAccountId: tools.AwsAccountId
+        DashboardId: tools.DashboardId
+      outputParameters:
+      - type: object
+        mapping: $.

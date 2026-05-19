@@ -1,0 +1,81 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon QuickSight API — Datasets
+  description: 'Amazon QuickSight API — Datasets. 1 operations. Lead operation: Amazon QuickSight List datasets. Self-contained
+    Naftiko capability covering one Amazon Quicksight business surface.'
+  tags:
+  - Amazon Quicksight
+  - Datasets
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_QUICKSIGHT_API_KEY: AMAZON_QUICKSIGHT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-quicksight-datasets
+    baseUri: https://quicksight.{region}.amazonaws.com
+    description: Amazon QuickSight API — Datasets business capability. Self-contained, no shared references.
+    resources:
+    - name: accounts-AwsAccountId-data-sets
+      path: /accounts/{AwsAccountId}/data-sets
+      operations:
+      - name: listdatasets
+        method: GET
+        description: Amazon QuickSight List datasets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: AwsAccountId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_QUICKSIGHT_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-quicksight-datasets-rest
+    port: 8080
+    description: REST adapter for Amazon QuickSight API — Datasets. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/accounts/{awsaccountid}/data-sets
+      name: accounts-awsaccountid-data-sets
+      description: REST surface for accounts-AwsAccountId-data-sets.
+      operations:
+      - method: GET
+        name: listdatasets
+        description: Amazon QuickSight List datasets
+        call: amazon-quicksight-datasets.listdatasets
+        with:
+          AwsAccountId: rest.AwsAccountId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-quicksight-datasets-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon QuickSight API — Datasets. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: amazon-quicksight-list-datasets
+      description: Amazon QuickSight List datasets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-quicksight-datasets.listdatasets
+      with:
+        AwsAccountId: tools.AwsAccountId
+      outputParameters:
+      - type: object
+        mapping: $.
