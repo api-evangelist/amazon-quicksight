@@ -1,0 +1,75 @@
+arazzo: 1.0.1
+info:
+  title: Amazon QuickSight Classify Datasets by Import Mode
+  summary: List an account's datasets and branch on whether any use SPICE import mode.
+  description: >-
+    QuickSight datasets are either materialized into SPICE or queried live with
+    DIRECT_QUERY, and the mix drives capacity planning. The workflow lists the
+    datasets in an account and branches on whether the account contains any SPICE
+    datasets, routing to a capacity-review outcome when it does and to a clean
+    end when every dataset is direct-query. Each step spells out its request
+    inline so the flow can be read and executed without opening the underlying
+    OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: quicksightApi
+  url: ../openapi/amazon-quicksight-openapi.yml
+  type: openapi
+workflows:
+- workflowId: classify-datasets-by-import-mode
+  summary: Inventory datasets and branch on the presence of SPICE-backed datasets.
+  description: >-
+    Lists the datasets in an account and branches on whether any dataset uses
+    SPICE import mode so SPICE capacity can be reviewed when present.
+  inputs:
+    type: object
+    required:
+    - AwsAccountId
+    properties:
+      AwsAccountId:
+        type: string
+        description: The AWS account id to classify QuickSight datasets for.
+  steps:
+  - stepId: listDataSets
+    description: >-
+      List the datasets in the account and branch on whether any of them are
+      materialized into SPICE.
+    operationId: ListDataSets
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dataSetSummaries: $response.body#/DataSetSummaries
+    onSuccess:
+    - name: hasSpiceDatasets
+      type: goto
+      stepId: reviewSpiceCapacity
+      criteria:
+      - context: $response.body
+        condition: $.DataSetSummaries[?(@.ImportMode == 'SPICE')]
+        type: jsonpath
+    - name: directQueryOnly
+      type: end
+      criteria:
+      - context: $response.body
+        condition: $.DataSetSummaries[?(@.ImportMode == 'SPICE')].length == 0
+        type: jsonpath
+  - stepId: reviewSpiceCapacity
+    description: >-
+      Re-list the datasets to capture the current set of SPICE-backed datasets
+      for the capacity review record.
+    operationId: ListDataSets
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dataSetSummaries: $response.body#/DataSetSummaries
+  outputs:
+    dataSetSummaries: $steps.listDataSets.outputs.dataSetSummaries
+    spiceReviewDataSetSummaries: $steps.reviewSpiceCapacity.outputs.dataSetSummaries

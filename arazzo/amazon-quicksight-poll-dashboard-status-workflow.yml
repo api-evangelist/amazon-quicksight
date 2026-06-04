@@ -1,0 +1,119 @@
+arazzo: 1.0.1
+info:
+  title: Amazon QuickSight Poll Dashboard Publish Status
+  summary: Repeatedly describe a dashboard until its version status settles, then branch.
+  description: >-
+    QuickSight dashboard version status moves through CREATION_IN_PROGRESS or
+    UPDATE_IN_PROGRESS before reaching a terminal state. This workflow describes
+    a dashboard, and when its version is still in progress it loops back to
+    describe it again, branching to a success end when the version reaches
+    CREATION_SUCCESSFUL or UPDATE_SUCCESSFUL and to a failure end when it reaches
+    CREATION_FAILED or UPDATE_FAILED. Each step spells out its request inline so
+    the flow can be read and executed without opening the underlying OpenAPI
+    description.
+  version: 1.0.0
+sourceDescriptions:
+- name: quicksightApi
+  url: ../openapi/amazon-quicksight-openapi.yml
+  type: openapi
+workflows:
+- workflowId: poll-dashboard-status
+  summary: Poll a dashboard version until it reaches a terminal publish state.
+  description: >-
+    Describes a dashboard on a loop until its version status is no longer in
+    progress, then branches to a success or failure outcome based on the final
+    status value.
+  inputs:
+    type: object
+    required:
+    - AwsAccountId
+    - DashboardId
+    properties:
+      AwsAccountId:
+        type: string
+        description: The AWS account id that contains the dashboard.
+      DashboardId:
+        type: string
+        description: The id of the dashboard whose version status is polled.
+  steps:
+  - stepId: describeDashboardStatus
+    description: >-
+      Describe the dashboard to read its current version status. While the
+      status is still in progress the step loops back onto itself; once it
+      settles it branches to the matching outcome.
+    operationId: DescribeDashboard
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    - name: DashboardId
+      in: path
+      value: $inputs.DashboardId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dashboardId: $response.body#/DashboardId
+      versionNumber: $response.body#/Version/VersionNumber
+      versionStatus: $response.body#/Version/Status
+    onSuccess:
+    - name: stillInProgress
+      type: goto
+      stepId: describeDashboardStatus
+      criteria:
+      - context: $response.body
+        condition: $.Version.Status == 'CREATION_IN_PROGRESS' || $.Version.Status == 'UPDATE_IN_PROGRESS'
+        type: jsonpath
+    - name: publishSucceeded
+      type: goto
+      stepId: confirmSuccess
+      criteria:
+      - context: $response.body
+        condition: $.Version.Status == 'CREATION_SUCCESSFUL' || $.Version.Status == 'UPDATE_SUCCESSFUL'
+        type: jsonpath
+    - name: publishFailed
+      type: goto
+      stepId: confirmFailure
+      criteria:
+      - context: $response.body
+        condition: $.Version.Status == 'CREATION_FAILED' || $.Version.Status == 'UPDATE_FAILED'
+        type: jsonpath
+  - stepId: confirmSuccess
+    description: >-
+      Re-describe the dashboard once it has reached a successful terminal state
+      to capture the final version number for downstream embedding or sharing.
+    operationId: DescribeDashboard
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    - name: DashboardId
+      in: path
+      value: $inputs.DashboardId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      versionNumber: $response.body#/Version/VersionNumber
+      versionStatus: $response.body#/Version/Status
+    onSuccess:
+    - name: done
+      type: end
+  - stepId: confirmFailure
+    description: >-
+      Re-describe the dashboard after it has reached a failed terminal state so
+      the failing version number and status are captured for diagnostics.
+    operationId: DescribeDashboard
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    - name: DashboardId
+      in: path
+      value: $inputs.DashboardId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      versionNumber: $response.body#/Version/VersionNumber
+      versionStatus: $response.body#/Version/Status
+  outputs:
+    finalStatusSucceeded: $steps.confirmSuccess.outputs.versionStatus
+    finalStatusFailed: $steps.confirmFailure.outputs.versionStatus

@@ -1,0 +1,86 @@
+arazzo: 1.0.1
+info:
+  title: Amazon QuickSight Find a Dashboard by Name
+  summary: Search the account dashboard list for a name match and describe the match.
+  description: >-
+    Resolves a dashboard from a human-friendly name rather than an id. The
+    workflow lists the dashboards in an account, branches on whether the list
+    contains a dashboard whose name equals the supplied value, and when a match
+    exists it describes that dashboard to return its full detail. When no match
+    is found the workflow ends without describing anything. Each step spells out
+    its request inline so the flow can be read and executed without opening the
+    underlying OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: quicksightApi
+  url: ../openapi/amazon-quicksight-openapi.yml
+  type: openapi
+workflows:
+- workflowId: find-dashboard-by-name
+  summary: Locate a dashboard by display name and describe it when found.
+  description: >-
+    Lists the dashboards in an account, branches on the presence of a name
+    match, and describes the matched dashboard.
+  inputs:
+    type: object
+    required:
+    - AwsAccountId
+    - DashboardName
+    properties:
+      AwsAccountId:
+        type: string
+        description: The AWS account id that contains the dashboards.
+      DashboardName:
+        type: string
+        description: The dashboard display name to search the account list for.
+  steps:
+  - stepId: listDashboards
+    description: >-
+      List the dashboards in the account and branch on whether any of them carry
+      the requested display name.
+    operationId: ListDashboards
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dashboardSummaryList: $response.body#/DashboardSummaryList
+      matchedDashboardId: $response.body#/DashboardSummaryList/0/DashboardId
+    onSuccess:
+    - name: nameMatched
+      type: goto
+      stepId: describeMatch
+      criteria:
+      - context: $response.body
+        condition: $.DashboardSummaryList[?(@.Name == '$inputs.DashboardName')]
+        type: jsonpath
+    - name: noMatch
+      type: end
+      criteria:
+      - context: $response.body
+        condition: $.DashboardSummaryList[?(@.Name == '$inputs.DashboardName')].length == 0
+        type: jsonpath
+  - stepId: describeMatch
+    description: >-
+      Describe the dashboard that matched the requested name to return its arn,
+      version number and publish status.
+    operationId: DescribeDashboard
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    - name: DashboardId
+      in: path
+      value: $steps.listDashboards.outputs.matchedDashboardId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dashboardId: $response.body#/DashboardId
+      dashboardArn: $response.body#/Arn
+      versionStatus: $response.body#/Version/Status
+  outputs:
+    dashboardSummaryList: $steps.listDashboards.outputs.dashboardSummaryList
+    matchedDashboardArn: $steps.describeMatch.outputs.dashboardArn
+    matchedVersionStatus: $steps.describeMatch.outputs.versionStatus

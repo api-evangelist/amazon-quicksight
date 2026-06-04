@@ -1,0 +1,82 @@
+arazzo: 1.0.1
+info:
+  title: Amazon QuickSight Account BI Inventory
+  summary: Catalog the datasets and dashboards in an account and describe a sample dashboard.
+  description: >-
+    Builds a lightweight inventory of an account's QuickSight assets by listing
+    every dataset and every dashboard, then describing the first dashboard to
+    capture its current version and publish status. This is the natural starting
+    point for an audit or migration where the datasets feeding the dashboards
+    need to be enumerated alongside the dashboards themselves. Each step spells
+    out its request inline so the flow can be read and executed without opening
+    the underlying OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: quicksightApi
+  url: ../openapi/amazon-quicksight-openapi.yml
+  type: openapi
+workflows:
+- workflowId: account-bi-inventory
+  summary: List datasets and dashboards for an account and describe a sample dashboard.
+  description: >-
+    Enumerates the datasets and dashboards in an AWS account, then describes the
+    first dashboard returned to surface its version and status for the
+    inventory.
+  inputs:
+    type: object
+    required:
+    - AwsAccountId
+    properties:
+      AwsAccountId:
+        type: string
+        description: The AWS account id to inventory QuickSight assets for.
+  steps:
+  - stepId: listDataSets
+    description: >-
+      List the datasets in the account so the data layer feeding the dashboards
+      is captured in the inventory.
+    operationId: ListDataSets
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dataSetSummaries: $response.body#/DataSetSummaries
+  - stepId: listDashboards
+    description: >-
+      List the dashboards in the account to capture the presentation layer and
+      resolve a dashboard id for the describe step.
+    operationId: ListDashboards
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dashboardSummaryList: $response.body#/DashboardSummaryList
+      firstDashboardId: $response.body#/DashboardSummaryList/0/DashboardId
+  - stepId: describeSampleDashboard
+    description: >-
+      Describe the first dashboard returned to enrich the inventory with the
+      dashboard's current version number and publish status.
+    operationId: DescribeDashboard
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    - name: DashboardId
+      in: path
+      value: $steps.listDashboards.outputs.firstDashboardId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dashboardName: $response.body#/Name
+      versionNumber: $response.body#/Version/VersionNumber
+      versionStatus: $response.body#/Version/Status
+  outputs:
+    dataSetSummaries: $steps.listDataSets.outputs.dataSetSummaries
+    dashboardSummaryList: $steps.listDashboards.outputs.dashboardSummaryList
+    sampleDashboardStatus: $steps.describeSampleDashboard.outputs.versionStatus

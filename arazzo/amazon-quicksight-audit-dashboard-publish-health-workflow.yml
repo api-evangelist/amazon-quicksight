@@ -1,0 +1,104 @@
+arazzo: 1.0.1
+info:
+  title: Amazon QuickSight Audit Dashboard Publish Health
+  summary: List dashboards, describe one, and branch on whether its version failed to publish.
+  description: >-
+    A health check for the dashboards in an account. The workflow lists the
+    dashboards, describes a target dashboard (the first listed by default, or one
+    pinned by id), and branches on its version status so that dashboards stuck in
+    a failed publish state are routed to a remediation outcome while healthy
+    dashboards are routed to a clean end. Each step spells out its request inline
+    so the flow can be read and executed without opening the underlying OpenAPI
+    description.
+  version: 1.0.0
+sourceDescriptions:
+- name: quicksightApi
+  url: ../openapi/amazon-quicksight-openapi.yml
+  type: openapi
+workflows:
+- workflowId: audit-dashboard-publish-health
+  summary: Detect dashboards whose latest version is in a failed publish state.
+  description: >-
+    Lists the dashboards in an account, describes a target dashboard, and
+    branches to a remediation outcome when its version status indicates a failed
+    publish.
+  inputs:
+    type: object
+    required:
+    - AwsAccountId
+    properties:
+      AwsAccountId:
+        type: string
+        description: The AWS account id that contains the dashboards.
+      DashboardId:
+        type: string
+        description: >-
+          Optional dashboard id to audit. When omitted the workflow audits the
+          first dashboard returned by the list step.
+  steps:
+  - stepId: listDashboards
+    description: >-
+      List the dashboards in the account so a dashboard id can be resolved for
+      the publish-health check.
+    operationId: ListDashboards
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dashboardSummaryList: $response.body#/DashboardSummaryList
+      firstDashboardId: $response.body#/DashboardSummaryList/0/DashboardId
+  - stepId: describeForHealth
+    description: >-
+      Describe the target dashboard and branch on its version status: a failed
+      status routes to remediation, any other status routes to a clean end.
+    operationId: DescribeDashboard
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    - name: DashboardId
+      in: path
+      value: $steps.listDashboards.outputs.firstDashboardId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      dashboardId: $response.body#/DashboardId
+      versionStatus: $response.body#/Version/Status
+    onSuccess:
+    - name: publishFailed
+      type: goto
+      stepId: flagForRemediation
+      criteria:
+      - context: $response.body
+        condition: $.Version.Status == 'CREATION_FAILED' || $.Version.Status == 'UPDATE_FAILED'
+        type: jsonpath
+    - name: healthy
+      type: end
+      criteria:
+      - context: $response.body
+        condition: $.Version.Status == 'CREATION_SUCCESSFUL' || $.Version.Status == 'UPDATE_SUCCESSFUL'
+        type: jsonpath
+  - stepId: flagForRemediation
+    description: >-
+      Re-describe the unhealthy dashboard to capture the failing version number
+      and last updated time for a remediation record.
+    operationId: DescribeDashboard
+    parameters:
+    - name: AwsAccountId
+      in: path
+      value: $inputs.AwsAccountId
+    - name: DashboardId
+      in: path
+      value: $steps.describeForHealth.outputs.dashboardId
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      versionNumber: $response.body#/Version/VersionNumber
+      versionStatus: $response.body#/Version/Status
+      lastUpdatedTime: $response.body#/LastUpdatedTime
+  outputs:
+    auditedStatus: $steps.describeForHealth.outputs.versionStatus
+    remediationVersionNumber: $steps.flagForRemediation.outputs.versionNumber
