@@ -1,0 +1,356 @@
+{
+  "info": {
+    "_postman_id": "615cb514-4921-43f8-be5b-caa33de6da68",
+    "name": "Amazon QuickSight API",
+    "description": "The Amazon QuickSight API enables programmatic management of QuickSight resources including dashboards, datasets, data sources, analyses, templates, users, and groups. You can also embed analytics into your applications.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:04:50.000Z",
+    "updatedAt": "2026-06-05T15:04:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-615cb514-4921-43f8-be5b-caa33de6da68"
+  },
+  "item": [
+    {
+      "name": "accounts",
+      "item": [
+        {
+          "name": "{AwsAccountId}",
+          "item": [
+            {
+              "name": "dashboards",
+              "item": [
+                {
+                  "name": "{DashboardId}",
+                  "item": [
+                    {
+                      "name": "Amazon QuickSight Describe a dashboard",
+                      "id": "2684d2c1-6558-40ce-9408-77187a336396",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/accounts/:AwsAccountId/dashboards/:DashboardId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "accounts",
+                            ":AwsAccountId",
+                            "dashboards",
+                            ":DashboardId"
+                          ],
+                          "variable": [
+                            {
+                              "id": "cccddf2c-9c82-440b-acb2-d9205405dbc7",
+                              "key": "AwsAccountId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            },
+                            {
+                              "id": "dc3c9318-7d0b-4bd9-913f-763d74efcedd",
+                              "key": "DashboardId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Provides a summary for a dashboard."
+                      },
+                      "response": [
+                        {
+                          "id": "527549c6-b3fa-41ce-8edb-4b4cc9640dd6",
+                          "name": "Dashboard details retrieved successfully",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/accounts/:AwsAccountId/dashboards/:DashboardId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "accounts",
+                                ":AwsAccountId",
+                                "dashboards",
+                                ":DashboardId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "AwsAccountId"
+                                },
+                                {
+                                  "key": "DashboardId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"DashboardId\": \"<string>\",\n  \"Arn\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"Version\": {\n    \"VersionNumber\": \"<integer>\",\n    \"Status\": \"CREATION_IN_PROGRESS\",\n    \"CreatedTime\": \"<dateTime>\"\n  },\n  \"CreatedTime\": \"<dateTime>\",\n  \"LastPublishedTime\": \"<dateTime>\",\n  \"LastUpdatedTime\": \"<dateTime>\"\n}",
+                          "createdAt": "2026-06-05T15:04:50.000Z",
+                          "updatedAt": "2026-06-05T15:04:50.000Z",
+                          "uid": "35240-527549c6-b3fa-41ce-8edb-4b4cc9640dd6"
+                        }
+                      ],
+                      "createdAt": "2026-06-05T15:04:50.000Z",
+                      "updatedAt": "2026-06-05T15:04:50.000Z",
+                      "uid": "35240-2684d2c1-6558-40ce-9408-77187a336396"
+                    }
+                  ],
+                  "id": "1716f31d-e378-4089-8739-ccf441a85d1c",
+                  "createdAt": "2026-06-05T15:04:50.000Z",
+                  "updatedAt": "2026-06-05T15:04:50.000Z",
+                  "uid": "35240-1716f31d-e378-4089-8739-ccf441a85d1c"
+                },
+                {
+                  "name": "Amazon QuickSight List dashboards",
+                  "id": "efaca7fd-4d33-4be9-8c61-ce9b2d0d51f6",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/accounts/:AwsAccountId/dashboards",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "accounts",
+                        ":AwsAccountId",
+                        "dashboards"
+                      ],
+                      "variable": [
+                        {
+                          "id": "6479b78e-fb87-46ee-97db-3f350ea656b3",
+                          "key": "AwsAccountId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Lists dashboards in an AWS account."
+                  },
+                  "response": [
+                    {
+                      "id": "a3de8d27-89fa-47a4-b89d-430d6e3659c9",
+                      "name": "Dashboards listed successfully",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/accounts/:AwsAccountId/dashboards",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "accounts",
+                            ":AwsAccountId",
+                            "dashboards"
+                          ],
+                          "variable": [
+                            {
+                              "key": "AwsAccountId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"DashboardSummaryList\": [\n    {\n      \"Arn\": \"<string>\",\n      \"DashboardId\": \"<string>\",\n      \"Name\": \"<string>\",\n      \"CreatedTime\": \"<dateTime>\",\n      \"LastUpdatedTime\": \"<dateTime>\",\n      \"PublishedVersionNumber\": \"<integer>\",\n      \"LastPublishedTime\": \"<dateTime>\"\n    },\n    {\n      \"Arn\": \"<string>\",\n      \"DashboardId\": \"<string>\",\n      \"Name\": \"<string>\",\n      \"CreatedTime\": \"<dateTime>\",\n      \"LastUpdatedTime\": \"<dateTime>\",\n      \"PublishedVersionNumber\": \"<integer>\",\n      \"LastPublishedTime\": \"<dateTime>\"\n    }\n  ]\n}",
+                      "createdAt": "2026-06-05T15:04:50.000Z",
+                      "updatedAt": "2026-06-05T15:04:50.000Z",
+                      "uid": "35240-a3de8d27-89fa-47a4-b89d-430d6e3659c9"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:04:50.000Z",
+                  "updatedAt": "2026-06-05T15:04:50.000Z",
+                  "uid": "35240-efaca7fd-4d33-4be9-8c61-ce9b2d0d51f6"
+                }
+              ],
+              "id": "3433a060-34f1-43e2-9285-e8b11e0f36f9",
+              "createdAt": "2026-06-05T15:04:50.000Z",
+              "updatedAt": "2026-06-05T15:04:50.000Z",
+              "uid": "35240-3433a060-34f1-43e2-9285-e8b11e0f36f9"
+            },
+            {
+              "name": "data-sets",
+              "item": [
+                {
+                  "name": "Amazon QuickSight List datasets",
+                  "id": "ef3fd42b-0884-431b-90ae-d6048eb8341b",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/accounts/:AwsAccountId/data-sets",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "accounts",
+                        ":AwsAccountId",
+                        "data-sets"
+                      ],
+                      "variable": [
+                        {
+                          "id": "ef94193c-fa4c-4286-bfe8-2453787cff78",
+                          "key": "AwsAccountId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Lists all datasets in the current AWS account."
+                  },
+                  "response": [
+                    {
+                      "id": "c8fff73e-6198-4699-bcb8-7e6702ba02e7",
+                      "name": "Datasets listed successfully",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/accounts/:AwsAccountId/data-sets",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "accounts",
+                            ":AwsAccountId",
+                            "data-sets"
+                          ],
+                          "variable": [
+                            {
+                              "key": "AwsAccountId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-06-05T15:04:50.000Z",
+                      "updatedAt": "2026-06-05T15:04:50.000Z",
+                      "uid": "35240-c8fff73e-6198-4699-bcb8-7e6702ba02e7"
+                    }
+                  ],
+                  "createdAt": "2026-06-05T15:04:50.000Z",
+                  "updatedAt": "2026-06-05T15:04:50.000Z",
+                  "uid": "35240-ef3fd42b-0884-431b-90ae-d6048eb8341b"
+                }
+              ],
+              "id": "cb284e96-3ece-49b8-8364-3d1c4bb2f379",
+              "createdAt": "2026-06-05T15:04:50.000Z",
+              "updatedAt": "2026-06-05T15:04:50.000Z",
+              "uid": "35240-cb284e96-3ece-49b8-8364-3d1c4bb2f379"
+            }
+          ],
+          "id": "b0625814-1d35-4de7-b1ad-ede32a3d0c48",
+          "createdAt": "2026-06-05T15:04:50.000Z",
+          "updatedAt": "2026-06-05T15:04:50.000Z",
+          "uid": "35240-b0625814-1d35-4de7-b1ad-ede32a3d0c48"
+        }
+      ],
+      "id": "aa31007f-f7f4-4580-b220-32213e568995",
+      "createdAt": "2026-06-05T15:04:50.000Z",
+      "updatedAt": "2026-06-05T15:04:50.000Z",
+      "uid": "35240-aa31007f-f7f4-4580-b220-32213e568995"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://quicksight.{{region}}.amazonaws.com"
+    }
+  ]
+}

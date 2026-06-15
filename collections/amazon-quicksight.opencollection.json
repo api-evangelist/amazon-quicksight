@@ -1,0 +1,93 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon QuickSight API",
+    "version": "2018-04-01"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Dashboards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon QuickSight List dashboards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://quicksight.{region}.amazonaws.com/accounts/:AwsAccountId/dashboards",
+            "params": [
+              {
+                "name": "AwsAccountId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists dashboards in an AWS account."
+        },
+        {
+          "info": {
+            "name": "Amazon QuickSight Describe a dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://quicksight.{region}.amazonaws.com/accounts/:AwsAccountId/dashboards/:DashboardId",
+            "params": [
+              {
+                "name": "AwsAccountId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "DashboardId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Provides a summary for a dashboard."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Datasets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon QuickSight List datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://quicksight.{region}.amazonaws.com/accounts/:AwsAccountId/data-sets",
+            "params": [
+              {
+                "name": "AwsAccountId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all datasets in the current AWS account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

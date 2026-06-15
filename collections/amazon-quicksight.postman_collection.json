@@ -1,0 +1,405 @@
+{
+  "item": [
+    {
+      "id": "5b8e6066-d512-4640-88cf-c1eaf9ac4e6a",
+      "name": "Dashboards",
+      "description": {
+        "content": "Operations for creating and managing dashboards",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3f40e6a9-7aa2-452d-a71b-90e4f55b5980",
+          "name": "Amazon QuickSight List dashboards",
+          "request": {
+            "name": "Amazon QuickSight List dashboards",
+            "description": {
+              "content": "Lists dashboards in an AWS account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts",
+                ":AwsAccountId",
+                "dashboards"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AwsAccountId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-northeast-2,ap-southeast-1,ap-southeast-2)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d16d17eb-0454-4ed1-b501-7f3004d75e09",
+              "name": "Dashboards listed successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts",
+                    ":AwsAccountId",
+                    "dashboards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AwsAccountId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-northeast-2,ap-southeast-1,ap-southeast-2)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"DashboardSummaryList\": [\n    {\n      \"Arn\": \"string\",\n      \"DashboardId\": \"string\",\n      \"Name\": \"string\",\n      \"CreatedTime\": \"1995-09-25T22:57:21.070Z\",\n      \"LastUpdatedTime\": \"1988-08-05T23:45:05.719Z\",\n      \"PublishedVersionNumber\": 6296,\n      \"LastPublishedTime\": \"1996-07-11T03:29:45.458Z\"\n    },\n    {\n      \"Arn\": \"string\",\n      \"DashboardId\": \"string\",\n      \"Name\": \"string\",\n      \"CreatedTime\": \"1957-08-10T02:52:18.110Z\",\n      \"LastUpdatedTime\": \"1979-08-19T05:43:26.999Z\",\n      \"PublishedVersionNumber\": 7792,\n      \"LastPublishedTime\": \"2019-02-08T03:29:24.643Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "327aaae9-5acc-4239-8f8d-04f016cd37b0",
+          "name": "Amazon QuickSight Describe a dashboard",
+          "request": {
+            "name": "Amazon QuickSight Describe a dashboard",
+            "description": {
+              "content": "Provides a summary for a dashboard.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts",
+                ":AwsAccountId",
+                "dashboards",
+                ":DashboardId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AwsAccountId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "DashboardId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-northeast-2,ap-southeast-1,ap-southeast-2)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "64597077-2ae9-4658-a9ad-2ff15e62c68d",
+              "name": "Dashboard details retrieved successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts",
+                    ":AwsAccountId",
+                    "dashboards",
+                    ":DashboardId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AwsAccountId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "DashboardId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-northeast-2,ap-southeast-1,ap-southeast-2)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"DashboardId\": \"string\",\n  \"Arn\": \"string\",\n  \"Name\": \"string\",\n  \"Version\": {\n    \"VersionNumber\": 567,\n    \"Status\": \"UPDATE_SUCCESSFUL\",\n    \"CreatedTime\": \"2023-02-01T14:24:05.172Z\"\n  },\n  \"CreatedTime\": \"2010-11-27T10:18:21.826Z\",\n  \"LastPublishedTime\": \"2019-06-05T22:08:07.534Z\",\n  \"LastUpdatedTime\": \"1978-03-29T08:25:21.957Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8154d73a-cafe-4520-9001-6d5c794722c2",
+      "name": "Datasets",
+      "description": {
+        "content": "Operations for managing datasets",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b59be087-3f36-4b3b-a964-a13170e5cb86",
+          "name": "Amazon QuickSight List datasets",
+          "request": {
+            "name": "Amazon QuickSight List datasets",
+            "description": {
+              "content": "Lists all datasets in the current AWS account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts",
+                ":AwsAccountId",
+                "data-sets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "AwsAccountId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-northeast-2,ap-southeast-1,ap-southeast-2)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "59652add-c962-4643-a0b9-054b08e37287",
+              "name": "Datasets listed successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts",
+                    ":AwsAccountId",
+                    "data-sets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "AwsAccountId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-northeast-2,ap-southeast-1,ap-southeast-2)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region (This can only be one of us-east-1,us-east-2,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-northeast-2,ap-southeast-1,ap-southeast-2)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://quicksight.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b279ce3e-a6c3-4852-9176-862d9f08900b",
+    "name": "Amazon QuickSight API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Amazon QuickSight API enables programmatic management of QuickSight resources including dashboards, datasets, data sources, analyses, templates, users, and groups. You can also embed analytics into your applications.\n\nContact Support:\n Name: AWS Support",
+      "type": "text/plain"
+    }
+  }
+}
