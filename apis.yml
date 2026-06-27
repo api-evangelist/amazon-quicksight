@@ -53,32 +53,29 @@ apis:
         url: https://docs.aws.amazon.com/quicksight/latest/user/welcome.html
       - type: APIReference
         url: https://docs.aws.amazon.com/quicksight/latest/APIReference/Welcome.html
-      - type: Quotas
+      - type: RateLimits
         url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
 common:
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-quicksight/overview
-  - type: ArazzoWorkflows
-    url: arazzo/
-    workflows:
-      - url: arazzo/amazon-quicksight-account-bi-inventory-workflow.yml
-        name: Amazon QuickSight Account BI Inventory
-        summary: Catalog the datasets and dashboards in an account and describe a sample dashboard.
-      - url: arazzo/amazon-quicksight-audit-dashboard-publish-health-workflow.yml
-        name: Amazon QuickSight Audit Dashboard Publish Health
-        summary: List dashboards, describe one, and branch on whether its version failed to publish.
-      - url: arazzo/amazon-quicksight-classify-datasets-by-import-mode-workflow.yml
-        name: Amazon QuickSight Classify Datasets by Import Mode
-        summary: List an account's datasets and branch on whether any use SPICE import mode.
-      - url: arazzo/amazon-quicksight-describe-dashboard-workflow.yml
-        name: Amazon QuickSight Describe a Dashboard
-        summary: List the dashboards in an account, then fetch the full detail for one of them.
-      - url: arazzo/amazon-quicksight-find-dashboard-by-name-workflow.yml
-        name: Amazon QuickSight Find a Dashboard by Name
-        summary: Search the account dashboard list for a name match and describe the match.
-      - url: arazzo/amazon-quicksight-poll-dashboard-status-workflow.yml
-        name: Amazon QuickSight Poll Dashboard Publish Status
-        summary: Repeatedly describe a dashboard until its version status settles, then branch.
+  - type: Arazzo
+    url: arazzo/amazon-quicksight-account-bi-inventory-workflow.yml
+    name: Amazon QuickSight Account BI Inventory
+  - type: Arazzo
+    url: arazzo/amazon-quicksight-audit-dashboard-publish-health-workflow.yml
+    name: Amazon QuickSight Audit Dashboard Publish Health
+  - type: Arazzo
+    url: arazzo/amazon-quicksight-classify-datasets-by-import-mode-workflow.yml
+    name: Amazon QuickSight Classify Datasets by Import Mode
+  - type: Arazzo
+    url: arazzo/amazon-quicksight-describe-dashboard-workflow.yml
+    name: Amazon QuickSight Describe a Dashboard
+  - type: Arazzo
+    url: arazzo/amazon-quicksight-find-dashboard-by-name-workflow.yml
+    name: Amazon QuickSight Find a Dashboard by Name
+  - type: Arazzo
+    url: arazzo/amazon-quicksight-poll-dashboard-status-workflow.yml
+    name: Amazon QuickSight Poll Dashboard Publish Status
   - type: Blog
     url: https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/
   - type: Support
@@ -87,7 +84,7 @@ common:
     url: https://quicksight.aws.amazon.com/
   - type: CLI
     url: https://docs.aws.amazon.com/cli/latest/reference/quicksight/
-  - type: SDK
+  - type: SDKs
     url: https://aws.amazon.com/tools/
   - type: StatusPage
     url: https://status.aws.amazon.com/
@@ -107,7 +104,7 @@ common:
     url: https://aws.amazon.com/quicksight/faqs/
   - type: PrivacyPolicy
     url: https://aws.amazon.com/privacy/
-  - type: SignUp
+  - type: Signup
     url: https://portal.aws.amazon.com/billing/signup
   - type: GitHubOrganization
     url: https://github.com/aws
@@ -137,13 +134,13 @@ common:
     url: json-structure/amazon-quicksight-openapi-data-set-summary-structure.json
   - type: JSONStructure
     url: json-structure/amazon-quicksight-structure.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-quicksight-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-quicksight-openapi-dashboard-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-quicksight-openapi-dashboard-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-quicksight-openapi-data-set-summary-example.json
   - type: SpectralRules
     url: rules/amazon-quicksight-spectral-rules.yml
