@@ -56,6 +56,12 @@ apis:
       - type: RateLimits
         url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
 common:
+  - type: VulnerabilityDisclosure
+    url: security/amazon-quicksight-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-quicksight-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-quicksight-authentication.yml
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-quicksight/overview
   - type: Arazzo
