@@ -56,6 +56,8 @@ apis:
       - type: RateLimits
         url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-quicksight-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/amazon-quicksight-vulnerability-disclosure.yml
   - type: DomainSecurity
