@@ -1,0 +1,16 @@
+{
+  "provider": "amazon-quicksight",
+  "sources": [
+    "amazon-quicksight-dashboards-api-openapi.yml",
+    "amazon-quicksight-datasets-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-quicksight-dashboards-api-openapi.yml",
+    "amazon-quicksight-datasets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
