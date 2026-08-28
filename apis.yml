@@ -4,6 +4,18 @@ description: >-
   for the cloud that enables you to create and publish interactive dashboards.
 url: https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/apis.yml
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: freemium
