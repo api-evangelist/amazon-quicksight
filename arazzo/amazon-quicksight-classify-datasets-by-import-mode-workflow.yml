@@ -12,8 +12,8 @@ info:
     OpenAPI description.
   version: 1.0.0
 sourceDescriptions:
-- name: quicksightApi
-  url: ../openapi/amazon-quicksight-openapi.yml
+- name: datasetsApi
+  url: ../openapi/amazon-quicksight-datasets-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: classify-datasets-by-import-mode

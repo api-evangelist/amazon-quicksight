@@ -13,8 +13,8 @@ info:
     description.
   version: 1.0.0
 sourceDescriptions:
-- name: quicksightApi
-  url: ../openapi/amazon-quicksight-openapi.yml
+- name: dashboardsApi
+  url: ../openapi/amazon-quicksight-dashboards-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: poll-dashboard-status
