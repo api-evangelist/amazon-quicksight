@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Amazon QuickSight Dashboards API
   description: The Amazon QuickSight API enables programmatic management of QuickSight resources including dashboards, datasets, data sources, analyses, templates, users, and groups. You can also embed analytics into your applications.
@@ -87,26 +87,6 @@ paths:
                 $ref: '#/components/schemas/Dashboard'
 components:
   schemas:
-    DashboardSummary:
-      type: object
-      properties:
-        Arn:
-          type: string
-        DashboardId:
-          type: string
-        Name:
-          type: string
-        CreatedTime:
-          type: string
-          format: date-time
-        LastUpdatedTime:
-          type: string
-          format: date-time
-        PublishedVersionNumber:
-          type: integer
-        LastPublishedTime:
-          type: string
-          format: date-time
     Dashboard:
       type: object
       properties:
@@ -140,6 +120,26 @@ components:
           type: string
           format: date-time
         LastUpdatedTime:
+          type: string
+          format: date-time
+    DashboardSummary:
+      type: object
+      properties:
+        Arn:
+          type: string
+        DashboardId:
+          type: string
+        Name:
+          type: string
+        CreatedTime:
+          type: string
+          format: date-time
+        LastUpdatedTime:
+          type: string
+          format: date-time
+        PublishedVersionNumber:
+          type: integer
+        LastPublishedTime:
           type: string
           format: date-time
   securitySchemes:
