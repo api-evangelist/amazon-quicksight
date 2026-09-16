@@ -1,7 +1,6 @@
 name: Amazon QuickSight
-description: >-
-  Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business intelligence service built
-  for the cloud that enables you to create and publish interactive dashboards.
+description: Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business
+  intelligence service built for the cloud that enables you to create and publish interactive dashboards.
 url: https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/apis.yml
 type: Index
 deliveryModel:
@@ -33,25 +32,25 @@ accessModel:
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 tags:
-  - Analytics
-  - AWS
-  - BI
-  - Business Intelligence
-  - Dashboards
-  - Machine-Learning
-  - Reporting
-  - Visualization
+- Analytics
+- AWS
+- BI
+- Business Intelligence
+- Dashboards
+- Machine-Learning
+- Reporting
+- Visualization
 tags_raw:
-  - Analytics
-  - AWS
-  - BI
-  - Business Intelligence
-  - Dashboards
-  - Machine Learning
-  - Reporting
-  - Visualization
+- Analytics
+- AWS
+- BI
+- Business Intelligence
+- Dashboards
+- Machine Learning
+- Reporting
+- Visualization
 created: '2024-01-15'
-modified: '2026-05-19'
+modified: '2026-09-16'
 apis:
 - aid: amazon-quicksight:amazon-quicksight-dashboards-api
   name: Amazon QuickSight Dashboards API
@@ -110,119 +109,121 @@ apis:
   - type: RateLimits
     url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
 common:
-  - type: AgenticAccess
-    url: agentic-access/amazon-quicksight-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/amazon-quicksight-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/amazon-quicksight-domain-security.yml
-  - type: Authentication
-    url: authentication/amazon-quicksight-authentication.yml
-  - type: PostmanWorkspace
-    url: https://www.postman.com/kinlaneapi/amazon-quicksight/overview
-  - type: Arazzo
-    url: arazzo/amazon-quicksight-account-bi-inventory-workflow.yml
-    name: Amazon QuickSight Account BI Inventory
-  - type: Arazzo
-    url: arazzo/amazon-quicksight-audit-dashboard-publish-health-workflow.yml
-    name: Amazon QuickSight Audit Dashboard Publish Health
-  - type: Arazzo
-    url: arazzo/amazon-quicksight-classify-datasets-by-import-mode-workflow.yml
-    name: Amazon QuickSight Classify Datasets by Import Mode
-  - type: Arazzo
-    url: arazzo/amazon-quicksight-describe-dashboard-workflow.yml
-    name: Amazon QuickSight Describe a Dashboard
-  - type: Arazzo
-    url: arazzo/amazon-quicksight-find-dashboard-by-name-workflow.yml
-    name: Amazon QuickSight Find a Dashboard by Name
-  - type: Arazzo
-    url: arazzo/amazon-quicksight-poll-dashboard-status-workflow.yml
-    name: Amazon QuickSight Poll Dashboard Publish Status
-  - type: Blog
-    url: https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/
-  - type: Support
-    url: https://aws.amazon.com/premiumsupport/
-  - type: Portal
-    url: https://quicksight.aws.amazon.com/
-  - type: CLI
-    url: https://docs.aws.amazon.com/cli/latest/reference/quicksight/
-  - type: SDKs
-    url: https://aws.amazon.com/tools/
-  - type: StatusPage
-    url: https://status.aws.amazon.com/
-  - type: Compliance
-    url: https://aws.amazon.com/compliance/
-  - type: TermsOfService
-    url: https://aws.amazon.com/service-terms/
-  - type: Portal
-    url: https://aws.amazon.com/quicksight/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/quicksight/
-  - type: Pricing
-    url: https://aws.amazon.com/quicksight/pricing/
-  - type: GettingStarted
-    url: https://aws.amazon.com/quicksight/getting-started/
-  - type: FAQ
-    url: https://aws.amazon.com/quicksight/faqs/
-  - type: PrivacyPolicy
-    url: https://aws.amazon.com/privacy/
-  - type: Signup
-    url: https://portal.aws.amazon.com/billing/signup
-  - type: GitHubOrganization
-    url: https://github.com/aws
-  - type: StackOverflow
-    url: https://stackoverflow.com/questions/tagged/amazon-quicksight
-  - type: CodeExamples
-    url: https://docs.aws.amazon.com/code-library/latest/ug/quicksight_code_examples.html
-  - type: JSONLD
-    url: json-ld/amazon-quicksight-openapi-dashboard-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-quicksight-openapi-dashboard-summary-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-quicksight-openapi-data-set-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-quicksight-schema.json-context.jsonld
-  - type: JSONSchema
-    url: json-schema/amazon-quicksight-openapi-dashboard-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-quicksight-openapi-dashboard-summary-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-quicksight-openapi-data-set-summary-schema.json
-  - type: JSONStructure
-    url: json-structure/amazon-quicksight-openapi-dashboard-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-quicksight-openapi-dashboard-summary-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-quicksight-openapi-data-set-summary-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-quicksight-structure.json
-  - type: Examples
-    url: examples/amazon-quicksight-example.json
-  - type: Examples
-    url: examples/amazon-quicksight-openapi-dashboard-example.json
-  - type: Examples
-    url: examples/amazon-quicksight-openapi-dashboard-summary-example.json
-  - type: Examples
-    url: examples/amazon-quicksight-openapi-data-set-summary-example.json
-  - type: SpectralRules
-    url: rules/amazon-quicksight-spectral-rules.yml
-  - type: Vocabulary
-    url: vocabulary/amazon-quicksight-vocabulary.yaml
-  - type: Integrations
-    url: https://aws.amazon.com/partners/
+- type: Website
+  url: https://amazon.com
+- type: AgenticAccess
+  url: agentic-access/amazon-quicksight-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-quicksight-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-quicksight-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-quicksight-authentication.yml
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-quicksight/overview
+- type: Arazzo
+  url: arazzo/amazon-quicksight-account-bi-inventory-workflow.yml
+  name: Amazon QuickSight Account BI Inventory
+- type: Arazzo
+  url: arazzo/amazon-quicksight-audit-dashboard-publish-health-workflow.yml
+  name: Amazon QuickSight Audit Dashboard Publish Health
+- type: Arazzo
+  url: arazzo/amazon-quicksight-classify-datasets-by-import-mode-workflow.yml
+  name: Amazon QuickSight Classify Datasets by Import Mode
+- type: Arazzo
+  url: arazzo/amazon-quicksight-describe-dashboard-workflow.yml
+  name: Amazon QuickSight Describe a Dashboard
+- type: Arazzo
+  url: arazzo/amazon-quicksight-find-dashboard-by-name-workflow.yml
+  name: Amazon QuickSight Find a Dashboard by Name
+- type: Arazzo
+  url: arazzo/amazon-quicksight-poll-dashboard-status-workflow.yml
+  name: Amazon QuickSight Poll Dashboard Publish Status
+- type: Blog
+  url: https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Portal
+  url: https://quicksight.aws.amazon.com/
+- type: CLI
+  url: https://docs.aws.amazon.com/cli/latest/reference/quicksight/
+- type: SDKs
+  url: https://aws.amazon.com/tools/
+- type: StatusPage
+  url: https://status.aws.amazon.com/
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: Portal
+  url: https://aws.amazon.com/quicksight/
+- type: Documentation
+  url: https://docs.aws.amazon.com/quicksight/
+- type: Pricing
+  url: https://aws.amazon.com/quicksight/pricing/
+- type: GettingStarted
+  url: https://aws.amazon.com/quicksight/getting-started/
+- type: FAQ
+  url: https://aws.amazon.com/quicksight/faqs/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: StackOverflow
+  url: https://stackoverflow.com/questions/tagged/amazon-quicksight
+- type: CodeExamples
+  url: https://docs.aws.amazon.com/code-library/latest/ug/quicksight_code_examples.html
+- type: JSONLD
+  url: json-ld/amazon-quicksight-openapi-dashboard-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-quicksight-openapi-dashboard-summary-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-quicksight-openapi-data-set-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-quicksight-schema.json-context.jsonld
+- type: JSONSchema
+  url: json-schema/amazon-quicksight-openapi-dashboard-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-quicksight-openapi-dashboard-summary-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-quicksight-openapi-data-set-summary-schema.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-openapi-dashboard-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-openapi-dashboard-summary-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-openapi-data-set-summary-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-structure.json
+- type: Examples
+  url: examples/amazon-quicksight-example.json
+- type: Examples
+  url: examples/amazon-quicksight-openapi-dashboard-example.json
+- type: Examples
+  url: examples/amazon-quicksight-openapi-dashboard-summary-example.json
+- type: Examples
+  url: examples/amazon-quicksight-openapi-data-set-summary-example.json
+- type: SpectralRules
+  url: rules/amazon-quicksight-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-quicksight-vocabulary.yaml
+- type: Integrations
+  url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
 include: []
 x-parent: aws
 x-relationship: product
