@@ -1,8 +1,7 @@
 {
   "provider": "amazon-quicksight",
   "sources": [
-    "amazon-quicksight-dashboards-api-openapi.yml",
-    "amazon-quicksight-datasets-api-openapi.yml"
+    "_original/amazon-quicksight-openapi.yml"
   ],
   "outputs": [
     "amazon-quicksight-dashboards-api-openapi.yml",
@@ -12,7 +11,12 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-quicksight-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-quicksight-dashboards-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-quicksight-datasets-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

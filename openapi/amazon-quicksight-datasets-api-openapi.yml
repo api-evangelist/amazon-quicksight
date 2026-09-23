@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon QuickSight Dashboards Datasets API
+  title: Amazon QuickSight Datasets API
   description: The Amazon QuickSight API enables programmatic management of QuickSight resources including dashboards, datasets, data sources, analyses, templates, users, and groups. You can also embed analytics into your applications.
   version: '2018-04-01'
   contact:
