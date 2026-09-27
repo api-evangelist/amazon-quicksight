@@ -36,7 +36,7 @@ tags:
 - AWS
 - Business Intelligence
 - Dashboards
-- Machine-Learning
+- Machine Learning
 - Reporting
 - Visualization
 tags_raw:
@@ -48,6 +48,7 @@ tags_raw:
 - Machine Learning
 - Reporting
 - Visualization
+- Machine-Learning
 created: '2024-01-15'
 modified: '2026-09-16'
 apis:
@@ -109,7 +110,7 @@ apis:
     url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
 common:
 - type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/quicksight/
 - type: AgenticAccess
   url: agentic-access/amazon-quicksight-agentic-access.yml
 - type: VulnerabilityDisclosure
@@ -224,5 +225,5 @@ maintainers:
   email: kin@apievangelist.com
   url: https://apievangelist.com
 include: []
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
