@@ -39,6 +39,7 @@ tags:
 - Machine Learning
 - Reporting
 - Visualization
+- Data Visualization
 tags_raw:
 - Analytics
 - AWS
@@ -49,6 +50,7 @@ tags_raw:
 - Reporting
 - Visualization
 - Machine-Learning
+- Data Visualization
 created: '2024-01-15'
 modified: '2026-09-16'
 apis:
@@ -109,6 +111,9 @@ apis:
   - type: RateLimits
     url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
 common:
+- type: CapabilityMap
+  url: capabilities/amazon-quicksight-capability-edges.yml
+  name: Amazon QuickSight Business Capability Map
 - type: Website
   url: https://aws.amazon.com/quicksight/
 - type: AgenticAccess

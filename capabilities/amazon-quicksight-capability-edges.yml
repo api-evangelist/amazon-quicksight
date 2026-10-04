@@ -1,0 +1,34 @@
+slug: amazon-quicksight
+provider: Amazon QuickSight
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Dashboards
+  spec_file: amazon-quicksight-dashboards-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.9
+  evidence: '"GET /accounts/{AwsAccountId}/dashboards ListDashboards" in a "machine learning-powered business
+    intelligence service... create and publish interactive dashboards"'
+  reason: Management of BI dashboards in a business intelligence platform directly realises analytics
+    and BI delivery.
+- tag: Datasets
+  spec_file: amazon-quicksight-datasets-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.75
+  evidence: '"GET /accounts/{AwsAccountId}/data-sets ListDataSets Amazon QuickSight List datasets"'
+  reason: Dataset inventory inside a BI service supports analytics/BI delivery; single read-only operation
+    makes the evidence thin, and it could alternatively be read as data architecture.
