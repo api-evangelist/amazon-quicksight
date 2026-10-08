@@ -205,3 +205,207 @@ rate_limit_statements:
 - Each SPICE dataset in the Quick Sight Enterprise edition supports a maximum 1 billion rows per 1 TB
   size.
 - A report unit is defined to be up to 100 pages long or 100 MB in size.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  - seat
+  - subscription
+  units:
+  - object
+  - seat
+  plans:
+  - name: Author
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Author Pro
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Reader
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Reader Pro
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Reader Capacity - Monthly
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Reader Capacity - Annual 50,000
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Reader Capacity - Annual 200,000
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Reader Capacity - Annual 400,000
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Reader Capacity - Annual 800,000
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Reader Capacity - Annual 1,600,000
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Reader Capacity - Annual 3,000,000+
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Amazon Q questions - Monthly
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Amazon Q questions - Annual 60,000
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - year
+  - name: Amazon Q questions - Annual 600,000
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - year
+  - name: Amazon Q questions - Annual 1,000,000+
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - other
+    periods:
+    - year
+  - name: Pixel-perfect reports - Monthly plan
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Pixel-perfect reports - Annual plan
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - year
+  - name: SPICE
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Alerts 1–1,000,000 metrics
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Alerts 1,000,001–10,000,000
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Alerts 10,000,001–100,000,000
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Alerts >100,000,000
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Standard Edition Annual plan
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Standard Edition Monthly plan
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
