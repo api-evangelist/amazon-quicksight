@@ -111,6 +111,10 @@ apis:
   - type: RateLimits
     url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
 common:
+- type: RateLimits
+  url: rate-limits/amazon-quicksight-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-quicksight-finops.yml
 - type: Plans
   url: plans/amazon-quicksight-plans-pricing.yml
 - type: CapabilityMap
