@@ -1,4 +1,4 @@
-# Amazon QuickSight (amazon-quicksight)
+# Amazon QuickSight
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,103 +66,235 @@
 
 Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business intelligence service built for the cloud that enables you to create and publish interactive dashboards.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/apis.yml)
+**Areas:** Analytics · AWS · Business Intelligence · Dashboards · Machine Learning · Reporting · Visualization · Data Visualization
 
-## Scope
+## Amazon QuickSight on APIs.io
 
-- **Type:** Index
+Everything profiled for Amazon QuickSight is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-quicksight/](https://apis.io/providers/amazon-quicksight/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (47)
 
-- Analytics
-- AWS
-- BI
-- Business Intelligence
-- Dashboards
-- Machine Learning
-- Reporting
-- Visualization
+- [Amazon QuickSight Dashboards API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-dashboards-api/) — Operations for creating and managing dashboards
+- [Amazon QuickSight Datasets API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-datasets-api/) — Operations for managing datasets
+- [Amazon QuickSight Quicksight Account API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-account-api/) — The Quicksight Account API from Amazon QuickSight — 1 operation(s) for quicksight account.
+- [Amazon QuickSight Quicksight Action Connectors API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-action-connectors-api/) — The Quicksight Action Connectors API from Amazon QuickSight — 2 operation(s) for quicksight action connectors.
+- [Amazon QuickSight Quicksight Agents API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-agents-api/) — The Quicksight Agents API from Amazon QuickSight — 2 operation(s) for quicksight agents.
+- [Amazon QuickSight Quicksight Aliases API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-aliases-api/) — The Quicksight Aliases API from Amazon QuickSight — 4 operation(s) for quicksight aliases.
+- [Amazon QuickSight Quicksight Analyses API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-analyses-api/) — The Quicksight Analyses API from Amazon QuickSight — 2 operation(s) for quicksight analyses.
+- [Amazon QuickSight Quicksight Apps API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-apps-api/) — The Quicksight Apps API from Amazon QuickSight — 2 operation(s) for quicksight apps.
+- [Amazon QuickSight Quicksight Asset Bundle Export Jobs API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-asset-bundle-export-jobs-api/) — The Quicksight Asset Bundle Export Jobs API from Amazon QuickSight — 3 operation(s) for quicksight asset bundle export jobs.
+- [Amazon QuickSight Quicksight Asset Bundle Import Jobs API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-asset-bundle-import-jobs-api/) — The Quicksight Asset Bundle Import Jobs API from Amazon QuickSight — 3 operation(s) for quicksight asset bundle import jobs.
+- [Amazon QuickSight Quicksight Brandassignments API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-brandassignments-api/) — The Quicksight Brandassignments API from Amazon QuickSight — 1 operation(s) for quicksight brandassignments.
+- [Amazon QuickSight Quicksight Brands API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-brands-api/) — The Quicksight Brands API from Amazon QuickSight — 2 operation(s) for quicksight brands.
+- [Amazon QuickSight Quicksight Custom Permission API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-custom-permission-api/) — The Quicksight Custom Permission API from Amazon QuickSight — 3 operation(s) for quicksight custom permission.
+- [Amazon QuickSight Quicksight Custom Permissions API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-custom-permissions-api/) — The Quicksight Custom Permissions API from Amazon QuickSight — 2 operation(s) for quicksight custom permissions.
+- [Amazon QuickSight Quicksight Customizations API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-customizations-api/) — The Quicksight Customizations API from Amazon QuickSight — 1 operation(s) for quicksight customizations.
+- [Amazon QuickSight Quicksight Data Loss Prevention API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-data-loss-prevention-api/) — The Quicksight Data Loss Prevention API from Amazon QuickSight — 2 operation(s) for quicksight data loss prevention.
+- [Amazon QuickSight Quicksight Data Sources API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-data-sources-api/) — The Quicksight Data Sources API from Amazon QuickSight — 2 operation(s) for quicksight data sources.
+- [Amazon QuickSight Quicksight Default Qbusiness Application API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-default-qbusiness-application-api/) — The Quicksight Default Qbusiness Application API from Amazon QuickSight — 1 operation(s) for quicksight default qbusiness application.
+- [Amazon QuickSight Quicksight Definition API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-definition-api/) — The Quicksight Definition API from Amazon QuickSight — 3 operation(s) for quicksight definition.
+- [Amazon QuickSight Quicksight Embed Url API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-embed-url-api/) — The Quicksight Embed Url API from Amazon QuickSight — 4 operation(s) for quicksight embed url.
+- [Amazon QuickSight Quicksight Flows API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-flows-api/) — The Quicksight Flows API from Amazon QuickSight — 3 operation(s) for quicksight flows.
+- [Amazon QuickSight Quicksight Folders API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-folders-api/) — The Quicksight Folders API from Amazon QuickSight — 3 operation(s) for quicksight folders.
+- [Amazon QuickSight Quicksight Governance API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-governance-api/) — The Quicksight Governance API from Amazon QuickSight — 2 operation(s) for quicksight governance.
+- [Amazon QuickSight Quicksight Groups API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-groups-api/) — The Quicksight Groups API from Amazon QuickSight — 3 operation(s) for quicksight groups.
+- [Amazon QuickSight Quicksight Iam Policy Assignments API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-iam-policy-assignments-api/) — The Quicksight Iam Policy Assignments API from Amazon QuickSight — 5 operation(s) for quicksight iam policy assignments.
+- [Amazon QuickSight Quicksight Identity Propagation Config API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-identity-propagation-config-api/) — The Quicksight Identity Propagation Config API from Amazon QuickSight — 2 operation(s) for quicksight identity propagation config.
+- [Amazon QuickSight Quicksight Ingestions API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-ingestions-api/) — The Quicksight Ingestions API from Amazon QuickSight — 2 operation(s) for quicksight ingestions.
+- [Amazon QuickSight Quicksight Knowledge Bases API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-knowledge-bases-api/) — The Quicksight Knowledge Bases API from Amazon QuickSight — 3 operation(s) for quicksight knowledge bases.
+- [Amazon QuickSight Quicksight Members API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-members-api/) — The Quicksight Members API from Amazon QuickSight — 6 operation(s) for quicksight members.
+- [Amazon QuickSight Quicksight Namespaces API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-namespaces-api/) — The Quicksight Namespaces API from Amazon QuickSight — 2 operation(s) for quicksight namespaces.
+- [Amazon QuickSight Quicksight Oauth Client Applications API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-oauth-client-applications-api/) — The Quicksight Oauth Client Applications API from Amazon QuickSight — 2 operation(s) for quicksight oauth client applications.
+- [Amazon QuickSight Quicksight Operations API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-operations-api/) — The Quicksight Operations API from Amazon QuickSight — 35 operation(s) for quicksight operations.
+- [Amazon QuickSight Quicksight Permissions API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-permissions-api/) — The Quicksight Permissions API from Amazon QuickSight — 15 operation(s) for quicksight permissions.
+- [Amazon QuickSight Quicksight Profiles API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-profiles-api/) — The Quicksight Profiles API from Amazon QuickSight — 2 operation(s) for quicksight profiles.
+- [Amazon QuickSight Quicksight Refresh Properties API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-refresh-properties-api/) — The Quicksight Refresh Properties API from Amazon QuickSight — 1 operation(s) for quicksight refresh properties.
+- [Amazon QuickSight Quicksight Refresh Schedules API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-refresh-schedules-api/) — The Quicksight Refresh Schedules API from Amazon QuickSight — 2 operation(s) for quicksight refresh schedules.
+- [Amazon QuickSight Quicksight Schedules API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-schedules-api/) — The Quicksight Schedules API from Amazon QuickSight — 3 operation(s) for quicksight schedules.
+- [Amazon QuickSight Quicksight Search API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-search-api/) — The Quicksight Search API from Amazon QuickSight — 12 operation(s) for quicksight search.
+- [Amazon QuickSight Quicksight Spaces API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-spaces-api/) — The Quicksight Spaces API from Amazon QuickSight — 2 operation(s) for quicksight spaces.
+- [Amazon QuickSight Quicksight Tags API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-tags-api/) — The Quicksight Tags API from Amazon QuickSight — 1 operation(s) for quicksight tags.
+- [Amazon QuickSight Quicksight Templates API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-templates-api/) — The Quicksight Templates API from Amazon QuickSight — 2 operation(s) for quicksight templates.
+- [Amazon QuickSight Quicksight Themes API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-themes-api/) — The Quicksight Themes API from Amazon QuickSight — 2 operation(s) for quicksight themes.
+- [Amazon QuickSight Quicksight Topics API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-topics-api/) — The Quicksight Topics API from Amazon QuickSight — 2 operation(s) for quicksight topics.
+- [Amazon QuickSight Quicksight Topicsv2 API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-topicsv2-api/) — The Quicksight Topicsv2 API from Amazon QuickSight — 2 operation(s) for quicksight topicsv2.
+- [Amazon QuickSight Quicksight Users API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-users-api/) — The Quicksight Users API from Amazon QuickSight — 2 operation(s) for quicksight users.
+- [Amazon QuickSight Quicksight Versions API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-versions-api/) — The Quicksight Versions API from Amazon QuickSight — 4 operation(s) for quicksight versions.
+- [Amazon QuickSight Quicksight Vpc Connections API](https://apis.io/apis/amazon-quicksight/amazon-quicksight-vpc-connections-api/) — The Quicksight Vpc Connections API from Amazon QuickSight — 2 operation(s) for quicksight vpc connections.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Arazzo workflows (6)
 
-### Amazon QuickSight API
+Multi-step workflows that chain operations into a business task.
 
-The Amazon QuickSight API enables you to programmatically manage dashboards, datasets, data sources, users, groups, and embed analytics into your applications.
+- [Amazon QuickSight Account BI Inventory](https://apis.io/arazzos/amazon-quicksight/amazon-quicksight-account-bi-inventory-workflow/)
+- [Amazon QuickSight Audit Dashboard Publish Health](https://apis.io/arazzos/amazon-quicksight/amazon-quicksight-audit-dashboard-publish-health-workflow/)
+- [Amazon QuickSight Classify Datasets by Import Mode](https://apis.io/arazzos/amazon-quicksight/amazon-quicksight-classify-datasets-by-import-mode-workflow/)
+- [Amazon QuickSight Describe a Dashboard](https://apis.io/arazzos/amazon-quicksight/amazon-quicksight-describe-dashboard-workflow/)
+- [Amazon QuickSight Find a Dashboard by Name](https://apis.io/arazzos/amazon-quicksight/amazon-quicksight-find-dashboard-by-name-workflow/)
+- [Amazon QuickSight Poll Dashboard Publish Status](https://apis.io/arazzos/amazon-quicksight/amazon-quicksight-poll-dashboard-status-workflow/)
 
-- **Human URL:** [https://aws.amazon.com/quicksight/](https://aws.amazon.com/quicksight/)
-- **Base URL:** `https://quicksight.amazonaws.com`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Analytics
-- Business Intelligence
-- Dashboards
+- [Amazon Quicksight Agentic Access](https://apis.io/agentic-access/amazon-quicksight/amazon-quicksight-agentic-access/)
 
-#### Properties
+#### JSON Schema (4)
 
-- [Documentation](https://docs.aws.amazon.com/quicksight/latest/user/welcome.html)
-- [OpenAPI](https://docs.aws.amazon.com/quicksight/latest/APIReference/Welcome.html) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/amazon-quicksight-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/amazon-quicksight.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-quicksight.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [OpenAPI](https://api.apis.guru/v2/specs/amazonaws.com/quicksight/2018-04-01/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](json-schema/amazon-quicksight-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/amazon-quicksight-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Pricing](https://aws.amazon.com/quicksight/pricing/)
-- [Getting Started](https://aws.amazon.com/quicksight/getting-started/)
-- [F A Q](https://aws.amazon.com/quicksight/faqs/)
-- [Features](https://aws.amazon.com/quicksight/features/)
-- [Documentation](https://docs.aws.amazon.com/quicksight/latest/user/welcome.html)
-- [API Reference](https://docs.aws.amazon.com/quicksight/latest/APIReference/Welcome.html)
-- [Quotas](https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html)
+The data models the API reads and writes.
 
-## Common Properties
+- [Amazon QuickSight Dashboard Definition](https://apis.io/schemas/amazon-quicksight/amazon-quicksight/)
+- [Dashboard](https://apis.io/schemas/amazon-quicksight/amazon-quicksight-openapi-dashboard/)
+- [DashboardSummary](https://apis.io/schemas/amazon-quicksight/amazon-quicksight-openapi-dashboard-summary/)
+- [DataSetSummary](https://apis.io/schemas/amazon-quicksight/amazon-quicksight-openapi-data-set-summary/)
 
-- [Arazzo Workflows](arazzo/) — [Arazzo Specification](https://spec.openapis.org/arazzo/latest.html)
-- [Blog](https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/)
-- [Support](https://aws.amazon.com/premiumsupport/)
-- [Portal](https://quicksight.aws.amazon.com/)
-- [C L I](https://docs.aws.amazon.com/cli/latest/reference/quicksight/)
-- [SDK](https://aws.amazon.com/tools/)
-- [Status Page](https://status.aws.amazon.com/)
-- [Compliance](https://aws.amazon.com/compliance/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Portal](https://aws.amazon.com/quicksight/)
+#### JSON Structure (4)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Quicksight Openapi Dashboard Structure](https://apis.io/json-structure/amazon-quicksight/amazon-quicksight-openapi-dashboard-structure/)
+- [Amazon Quicksight Openapi Dashboard Summary Structure](https://apis.io/json-structure/amazon-quicksight/amazon-quicksight-openapi-dashboard-summary-structure/)
+- [Amazon Quicksight Openapi Data Set Summary Structure](https://apis.io/json-structure/amazon-quicksight/amazon-quicksight-openapi-data-set-summary-structure/)
+- [Amazon Quicksight Structure](https://apis.io/json-structure/amazon-quicksight/amazon-quicksight-structure/)
+
+#### JSON-LD (5)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Quicksight Context](https://apis.io/jsonld/amazon-quicksight/amazon-quicksight-context/)
+- [Amazon Quicksight Openapi Dashboard Context](https://apis.io/jsonld/amazon-quicksight/amazon-quicksight-openapi-dashboard-context/)
+- [Amazon Quicksight Openapi Dashboard Summary Context](https://apis.io/jsonld/amazon-quicksight/amazon-quicksight-openapi-dashboard-summary-context/)
+- [Amazon Quicksight Openapi Data Set Context](https://apis.io/jsonld/amazon-quicksight/amazon-quicksight-openapi-data-set-context/)
+- [Amazon Quicksight Schema.Json Context](https://apis.io/jsonld/amazon-quicksight/amazon-quicksight-schema.json-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Quicksight Vocabulary](https://apis.io/vocabularies/amazon-quicksight/amazon-quicksight-vocabulary/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Amazon Quicksight Example](https://apis.io/examples/amazon-quicksight/amazon-quicksight-example/)
+- [Amazon Quicksight Openapi Dashboard Example](https://apis.io/examples/amazon-quicksight/amazon-quicksight-openapi-dashboard-example/)
+- [Amazon Quicksight Openapi Dashboard Summary Example](https://apis.io/examples/amazon-quicksight/amazon-quicksight-openapi-dashboard-summary-example/)
+- [Amazon Quicksight Openapi Data Set Summary Example](https://apis.io/examples/amazon-quicksight/amazon-quicksight-openapi-data-set-summary-example/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [Amazon QuickSight API](https://apis.io/collections/amazon-quicksight/open-amazon-quicksight/)
+- [Amazon QuickSight Dashboards API](https://apis.io/collections/amazon-quicksight/open-amazon-quicksight-dashboards-api/)
+- [Amazon QuickSight Dashboards Datasets API](https://apis.io/collections/amazon-quicksight/open-amazon-quicksight-datasets-api/)
+- [Amazon QuickSight API](https://apis.io/collections/amazon-quicksight/postman-amazon-quicksight/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon QuickSight — jsonschema rules](https://apis.io/rules/amazon-quicksight/amazon-quicksight-jsonschema-spectral-rules/)
+- [Amazon QuickSight API Rules](https://apis.io/rules/amazon-quicksight/amazon-quicksight-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Quicksight Authentication](https://apis.io/security/amazon-quicksight/amazon-quicksight-authentication/)
+- [Amazon Quicksight Domain Security](https://apis.io/security/amazon-quicksight/amazon-quicksight-domain-security/)
+- [Amazon Quicksight Vulnerability Disclosure](https://apis.io/security/amazon-quicksight/amazon-quicksight-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Quicksight Plans Pricing](https://apis.io/plans/amazon-quicksight/amazon-quicksight-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Quicksight Rate Limits](https://apis.io/rate-limits/amazon-quicksight/amazon-quicksight-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Quicksight Finops](https://apis.io/finops/amazon-quicksight/amazon-quicksight-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/quicksight/)
 - [Documentation](https://docs.aws.amazon.com/quicksight/)
+- [Getting started](https://aws.amazon.com/quicksight/getting-started/)
 - [Pricing](https://aws.amazon.com/quicksight/pricing/)
-- [Getting Started](https://aws.amazon.com/quicksight/getting-started/)
-- [F A Q](https://aws.amazon.com/quicksight/faqs/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
-- [GitHub Organization](https://github.com/aws)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/amazon-quicksight)
-- [Code Examples](https://docs.aws.amazon.com/code-library/latest/ug/quicksight_code_examples.html)
-- [JSON-LD](json-ld/amazon-quicksight-openapi-dashboard-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-quicksight-openapi-dashboard-summary-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-quicksight-openapi-data-set-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-quicksight-schema.json-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON Schema](json-schema/amazon-quicksight-openapi-dashboard-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-quicksight-openapi-dashboard-summary-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-quicksight-openapi-data-set-summary-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/amazon-quicksight-openapi-dashboard-structure.json)
-- [JSON Structure](json-structure/amazon-quicksight-openapi-dashboard-summary-structure.json)
-- [JSON Structure](json-structure/amazon-quicksight-openapi-data-set-summary-structure.json)
-- [JSON Structure](json-structure/amazon-quicksight-structure.json)
-- [Example](examples/amazon-quicksight-example.json)
-- [Example](examples/amazon-quicksight-openapi-dashboard-example.json)
-- [Example](examples/amazon-quicksight-openapi-dashboard-summary-example.json)
-- [Example](examples/amazon-quicksight-openapi-data-set-summary-example.json)
-- [Spectral Rules](rules/amazon-quicksight-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-quicksight-vocabulary.yaml)
-- [Integrations](https://aws.amazon.com/partners/)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [Blog](https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/)
+- [Compliance](https://aws.amazon.com/compliance/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://status.aws.amazon.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 62.6** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 59.4 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 72.6 |
+| Access clarity | 84.2 |
+
+**Agent readiness 26.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 32.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-quicksight/](https://apis.io/providers/amazon-quicksight/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon QuickSight: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-quicksight/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
