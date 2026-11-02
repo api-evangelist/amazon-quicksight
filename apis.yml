@@ -1,0 +1,738 @@
+name: Amazon QuickSight
+description: Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business
+  intelligence service built for the cloud that enables you to create and publish interactive dashboards.
+url: https://raw.githubusercontent.com/api-evangelist/amazon-quicksight/refs/heads/main/apis.yml
+type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
+specificationVersion: '0.23'
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  - security
+  generated: '2026-09-03'
+  method: derived
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+tags:
+- Analytics
+- Amazon Web Services
+- Business Intelligence
+- Dashboards
+- Machine Learning
+- Reporting
+- Visualization
+- Data Visualization
+tags_raw:
+- Analytics
+- AWS
+- BI
+- Business Intelligence
+- Dashboards
+- Machine Learning
+- Reporting
+- Visualization
+- Machine-Learning
+- Data Visualization
+created: '2024-01-15'
+modified: '2026-09-16'
+apis:
+- aid: amazon-quicksight:amazon-quicksight-dashboards-api
+  name: Amazon QuickSight Dashboards API
+  description: Operations for creating and managing dashboards
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Dashboards
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-dashboards-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/quicksight/latest/user/welcome.html
+  - type: JSONSchema
+    url: json-schema/amazon-quicksight-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-quicksight-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/quicksight/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/quicksight/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/quicksight/faqs/
+  - type: Features
+    url: https://aws.amazon.com/quicksight/features/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/quicksight/latest/APIReference/Welcome.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
+- aid: amazon-quicksight:amazon-quicksight-datasets-api
+  name: Amazon QuickSight Datasets API
+  description: Operations for managing datasets
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Datasets
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-datasets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/quicksight/latest/user/welcome.html
+  - type: JSONSchema
+    url: json-schema/amazon-quicksight-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-quicksight-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/quicksight/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/quicksight/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/quicksight/faqs/
+  - type: Features
+    url: https://aws.amazon.com/quicksight/features/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/quicksight/latest/APIReference/Welcome.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/quicksight/latest/user/service-quotas.html
+- aid: amazon-quicksight:amazon-quicksight-account-api
+  name: Amazon QuickSight Quicksight Account API
+  description: >-
+    The Quicksight Account API from Amazon QuickSight — 1 operation(s) for quicksight account.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Account
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-account-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-action-connectors-api
+  name: Amazon QuickSight Quicksight Action Connectors API
+  description: >-
+    The Quicksight Action Connectors API from Amazon QuickSight — 2 operation(s) for quicksight action
+    connectors.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Action Connectors
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-action-connectors-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-agents-api
+  name: Amazon QuickSight Quicksight Agents API
+  description: The Quicksight Agents API from Amazon QuickSight — 2 operation(s) for quicksight agents.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Agents
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-agents-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-aliases-api
+  name: Amazon QuickSight Quicksight Aliases API
+  description: >-
+    The Quicksight Aliases API from Amazon QuickSight — 4 operation(s) for quicksight aliases.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Aliases
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-aliases-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-analyses-api
+  name: Amazon QuickSight Quicksight Analyses API
+  description: >-
+    The Quicksight Analyses API from Amazon QuickSight — 2 operation(s) for quicksight analyses.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Analyses
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-analyses-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-apps-api
+  name: Amazon QuickSight Quicksight Apps API
+  description: The Quicksight Apps API from Amazon QuickSight — 2 operation(s) for quicksight apps.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Apps
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-apps-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-asset-bundle-export-jobs-api
+  name: Amazon QuickSight Quicksight Asset Bundle Export Jobs API
+  description: >-
+    The Quicksight Asset Bundle Export Jobs API from Amazon QuickSight — 3 operation(s) for quicksight
+    asset bundle export jobs.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Asset Bundle Export Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-asset-bundle-export-jobs-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-asset-bundle-import-jobs-api
+  name: Amazon QuickSight Quicksight Asset Bundle Import Jobs API
+  description: >-
+    The Quicksight Asset Bundle Import Jobs API from Amazon QuickSight — 3 operation(s) for quicksight
+    asset bundle import jobs.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Asset Bundle Import Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-asset-bundle-import-jobs-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-brandassignments-api
+  name: Amazon QuickSight Quicksight Brandassignments API
+  description: >-
+    The Quicksight Brandassignments API from Amazon QuickSight — 1 operation(s) for quicksight brandassignments.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Brandassignments
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-brandassignments-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-brands-api
+  name: Amazon QuickSight Quicksight Brands API
+  description: The Quicksight Brands API from Amazon QuickSight — 2 operation(s) for quicksight brands.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Brands
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-brands-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-custom-permission-api
+  name: Amazon QuickSight Quicksight Custom Permission API
+  description: >-
+    The Quicksight Custom Permission API from Amazon QuickSight — 3 operation(s) for quicksight custom
+    permission.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Custom Permission
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-custom-permission-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-custom-permissions-api
+  name: Amazon QuickSight Quicksight Custom Permissions API
+  description: >-
+    The Quicksight Custom Permissions API from Amazon QuickSight — 2 operation(s) for quicksight custom
+    permissions.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Custom Permissions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-custom-permissions-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-customizations-api
+  name: Amazon QuickSight Quicksight Customizations API
+  description: >-
+    The Quicksight Customizations API from Amazon QuickSight — 1 operation(s) for quicksight customizations.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Customizations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-customizations-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-data-loss-prevention-api
+  name: Amazon QuickSight Quicksight Data Loss Prevention API
+  description: >-
+    The Quicksight Data Loss Prevention API from Amazon QuickSight — 2 operation(s) for quicksight data
+    loss prevention.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Data Loss Prevention
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-data-loss-prevention-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-data-sources-api
+  name: Amazon QuickSight Quicksight Data Sources API
+  description: >-
+    The Quicksight Data Sources API from Amazon QuickSight — 2 operation(s) for quicksight data sources.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Data Sources
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-data-sources-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-default-qbusiness-application-api
+  name: Amazon QuickSight Quicksight Default Qbusiness Application API
+  description: >-
+    The Quicksight Default Qbusiness Application API from Amazon QuickSight — 1 operation(s) for quicksight
+    default qbusiness application.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Default Qbusiness Application
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-default-qbusiness-application-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-definition-api
+  name: Amazon QuickSight Quicksight Definition API
+  description: >-
+    The Quicksight Definition API from Amazon QuickSight — 3 operation(s) for quicksight definition.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Definition
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-definition-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-embed-url-api
+  name: Amazon QuickSight Quicksight Embed Url API
+  description: >-
+    The Quicksight Embed Url API from Amazon QuickSight — 4 operation(s) for quicksight embed url.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Embed Url
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-embed-url-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-flows-api
+  name: Amazon QuickSight Quicksight Flows API
+  description: The Quicksight Flows API from Amazon QuickSight — 3 operation(s) for quicksight flows.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Flows
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-flows-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-folders-api
+  name: Amazon QuickSight Quicksight Folders API
+  description: >-
+    The Quicksight Folders API from Amazon QuickSight — 3 operation(s) for quicksight folders.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Folders
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-folders-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-governance-api
+  name: Amazon QuickSight Quicksight Governance API
+  description: >-
+    The Quicksight Governance API from Amazon QuickSight — 2 operation(s) for quicksight governance.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Governance
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-governance-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-groups-api
+  name: Amazon QuickSight Quicksight Groups API
+  description: The Quicksight Groups API from Amazon QuickSight — 3 operation(s) for quicksight groups.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-groups-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-iam-policy-assignments-api
+  name: Amazon QuickSight Quicksight Iam Policy Assignments API
+  description: >-
+    The Quicksight Iam Policy Assignments API from Amazon QuickSight — 5 operation(s) for quicksight iam
+    policy assignments.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Iam Policy Assignments
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-iam-policy-assignments-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-identity-propagation-config-api
+  name: Amazon QuickSight Quicksight Identity Propagation Config API
+  description: >-
+    The Quicksight Identity Propagation Config API from Amazon QuickSight — 2 operation(s) for quicksight
+    identity propagation config.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Identity Propagation Config
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-identity-propagation-config-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-ingestions-api
+  name: Amazon QuickSight Quicksight Ingestions API
+  description: >-
+    The Quicksight Ingestions API from Amazon QuickSight — 2 operation(s) for quicksight ingestions.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Ingestions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-ingestions-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-knowledge-bases-api
+  name: Amazon QuickSight Quicksight Knowledge Bases API
+  description: >-
+    The Quicksight Knowledge Bases API from Amazon QuickSight — 3 operation(s) for quicksight knowledge
+    bases.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Knowledge Bases
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-knowledge-bases-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-members-api
+  name: Amazon QuickSight Quicksight Members API
+  description: >-
+    The Quicksight Members API from Amazon QuickSight — 6 operation(s) for quicksight members.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Members
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-members-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-namespaces-api
+  name: Amazon QuickSight Quicksight Namespaces API
+  description: >-
+    The Quicksight Namespaces API from Amazon QuickSight — 2 operation(s) for quicksight namespaces.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Namespaces
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-namespaces-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-oauth-client-applications-api
+  name: Amazon QuickSight Quicksight Oauth Client Applications API
+  description: >-
+    The Quicksight Oauth Client Applications API from Amazon QuickSight — 2 operation(s) for quicksight
+    oauth client applications.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Oauth Client Applications
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-oauth-client-applications-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-operations-api
+  name: Amazon QuickSight Quicksight Operations API
+  description: >-
+    The Quicksight Operations API from Amazon QuickSight — 35 operation(s) for quicksight operations.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-operations-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-permissions-api
+  name: Amazon QuickSight Quicksight Permissions API
+  description: >-
+    The Quicksight Permissions API from Amazon QuickSight — 15 operation(s) for quicksight permissions.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Permissions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-permissions-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-profiles-api
+  name: Amazon QuickSight Quicksight Profiles API
+  description: >-
+    The Quicksight Profiles API from Amazon QuickSight — 2 operation(s) for quicksight profiles.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Profiles
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-profiles-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-refresh-properties-api
+  name: Amazon QuickSight Quicksight Refresh Properties API
+  description: >-
+    The Quicksight Refresh Properties API from Amazon QuickSight — 1 operation(s) for quicksight refresh
+    properties.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Refresh Properties
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-refresh-properties-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-refresh-schedules-api
+  name: Amazon QuickSight Quicksight Refresh Schedules API
+  description: >-
+    The Quicksight Refresh Schedules API from Amazon QuickSight — 2 operation(s) for quicksight refresh
+    schedules.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Refresh Schedules
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-refresh-schedules-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-schedules-api
+  name: Amazon QuickSight Quicksight Schedules API
+  description: >-
+    The Quicksight Schedules API from Amazon QuickSight — 3 operation(s) for quicksight schedules.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Schedules
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-schedules-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-search-api
+  name: Amazon QuickSight Quicksight Search API
+  description: >-
+    The Quicksight Search API from Amazon QuickSight — 12 operation(s) for quicksight search.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Search
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-search-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-spaces-api
+  name: Amazon QuickSight Quicksight Spaces API
+  description: The Quicksight Spaces API from Amazon QuickSight — 2 operation(s) for quicksight spaces.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Spaces
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-spaces-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-tags-api
+  name: Amazon QuickSight Quicksight Tags API
+  description: The Quicksight Tags API from Amazon QuickSight — 1 operation(s) for quicksight tags.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-tags-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-templates-api
+  name: Amazon QuickSight Quicksight Templates API
+  description: >-
+    The Quicksight Templates API from Amazon QuickSight — 2 operation(s) for quicksight templates.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-templates-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-themes-api
+  name: Amazon QuickSight Quicksight Themes API
+  description: The Quicksight Themes API from Amazon QuickSight — 2 operation(s) for quicksight themes.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Themes
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-themes-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-topics-api
+  name: Amazon QuickSight Quicksight Topics API
+  description: The Quicksight Topics API from Amazon QuickSight — 2 operation(s) for quicksight topics.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Topics
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-topics-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-topicsv2-api
+  name: Amazon QuickSight Quicksight Topicsv2 API
+  description: >-
+    The Quicksight Topicsv2 API from Amazon QuickSight — 2 operation(s) for quicksight topicsv2.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Topicsv2
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-topicsv2-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-users-api
+  name: Amazon QuickSight Quicksight Users API
+  description: The Quicksight Users API from Amazon QuickSight — 2 operation(s) for quicksight users.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Users
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-users-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-versions-api
+  name: Amazon QuickSight Quicksight Versions API
+  description: >-
+    The Quicksight Versions API from Amazon QuickSight — 4 operation(s) for quicksight versions.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-versions-api-openapi.yml
+- aid: amazon-quicksight:amazon-quicksight-vpc-connections-api
+  name: Amazon QuickSight Quicksight Vpc Connections API
+  description: >-
+    The Quicksight Vpc Connections API from Amazon QuickSight — 2 operation(s) for quicksight vpc connections.
+  humanURL: https://aws.amazon.com/quicksight/
+  baseURL: https://quicksight.amazonaws.com
+  tags:
+  - Quicksight Vpc Connections
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-quicksight-vpc-connections-api-openapi.yml
+common:
+- type: RateLimits
+  url: rate-limits/amazon-quicksight-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-quicksight-finops.yml
+- type: Plans
+  url: plans/amazon-quicksight-plans-pricing.yml
+- type: CapabilityMap
+  url: capabilities/amazon-quicksight-capability-edges.yml
+  name: Amazon QuickSight Business Capability Map
+- type: Website
+  url: https://aws.amazon.com/quicksight/
+- type: AgenticAccess
+  url: agentic-access/amazon-quicksight-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-quicksight-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-quicksight-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-quicksight-authentication.yml
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-quicksight/overview
+- type: Arazzo
+  url: arazzo/amazon-quicksight-account-bi-inventory-workflow.yml
+  name: Amazon QuickSight Account BI Inventory
+- type: Arazzo
+  url: arazzo/amazon-quicksight-audit-dashboard-publish-health-workflow.yml
+  name: Amazon QuickSight Audit Dashboard Publish Health
+- type: Arazzo
+  url: arazzo/amazon-quicksight-classify-datasets-by-import-mode-workflow.yml
+  name: Amazon QuickSight Classify Datasets by Import Mode
+- type: Arazzo
+  url: arazzo/amazon-quicksight-describe-dashboard-workflow.yml
+  name: Amazon QuickSight Describe a Dashboard
+- type: Arazzo
+  url: arazzo/amazon-quicksight-find-dashboard-by-name-workflow.yml
+  name: Amazon QuickSight Find a Dashboard by Name
+- type: Arazzo
+  url: arazzo/amazon-quicksight-poll-dashboard-status-workflow.yml
+  name: Amazon QuickSight Poll Dashboard Publish Status
+- type: Blog
+  url: https://aws.amazon.com/blogs/business-intelligence/category/analytics/amazon-quicksight/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Portal
+  url: https://quicksight.aws.amazon.com/
+- type: CLI
+  url: https://docs.aws.amazon.com/cli/latest/reference/quicksight/
+- type: SDKs
+  url: https://aws.amazon.com/tools/
+- type: StatusPage
+  url: https://status.aws.amazon.com/
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: Portal
+  url: https://aws.amazon.com/quicksight/
+- type: Documentation
+  url: https://docs.aws.amazon.com/quicksight/
+- type: Pricing
+  url: https://aws.amazon.com/quicksight/pricing/
+- type: GettingStarted
+  url: https://aws.amazon.com/quicksight/getting-started/
+- type: FAQ
+  url: https://aws.amazon.com/quicksight/faqs/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: StackOverflow
+  url: https://stackoverflow.com/questions/tagged/amazon-quicksight
+- type: CodeExamples
+  url: https://docs.aws.amazon.com/code-library/latest/ug/quicksight_code_examples.html
+- type: JSONLD
+  url: json-ld/amazon-quicksight-openapi-dashboard-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-quicksight-openapi-dashboard-summary-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-quicksight-openapi-data-set-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-quicksight-schema.json-context.jsonld
+- type: JSONSchema
+  url: json-schema/amazon-quicksight-openapi-dashboard-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-quicksight-openapi-dashboard-summary-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-quicksight-openapi-data-set-summary-schema.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-openapi-dashboard-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-openapi-dashboard-summary-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-openapi-data-set-summary-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-quicksight-structure.json
+- type: Examples
+  url: examples/amazon-quicksight-example.json
+- type: Examples
+  url: examples/amazon-quicksight-openapi-dashboard-example.json
+- type: Examples
+  url: examples/amazon-quicksight-openapi-dashboard-summary-example.json
+- type: Examples
+  url: examples/amazon-quicksight-openapi-data-set-summary-example.json
+- type: SpectralRules
+  url: rules/amazon-quicksight-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-quicksight-vocabulary.yaml
+- type: Integrations
+  url: https://aws.amazon.com/partners/
+integrations:
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+include: []
+x-parent: amazon-web-services
+x-relationship: product
