@@ -206,7 +206,7 @@ rate_limit_statements:
   size.
 - A report unit is defined to be up to 100 pages long or 100 MB in size.
 x-canonical:
-  generated: '2026-11-02'
+  generated: '2026-11-06'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
@@ -214,6 +214,7 @@ x-canonical:
   - seat
   - subscription
   units:
+  - data
   - object
   - seat
   plans:
@@ -355,10 +356,10 @@ x-canonical:
     - year
   - name: SPICE
     access: other
-    model: subscription
+    model: hybrid
     model_how: derived
     units:
-    - other
+    - data
     periods:
     - month
   - name: Alerts 1–1,000,000 metrics
