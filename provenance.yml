@@ -5,6 +5,9 @@ artifacts:
   agentic-access/amazon-quicksight-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-quicksight-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   arazzo/amazon-quicksight-account-bi-inventory-workflow.yml:
     method: derived
     evidence: Arazzo whose sourceDescriptions are our split specs (../openapi/)
@@ -29,6 +32,18 @@ artifacts:
   capabilities/amazon-quicksight-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  changelog/amazon-quicksight-changelog.yml:
+    method: searched
+    evidence: declared in the artifact
+  cli/amazon-quicksight-cli.yml:
+    method: searched
+    evidence: declared in the artifact
   collections/amazon-quicksight-dashboards-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-quicksight-dashboards-api
@@ -47,6 +62,27 @@ artifacts:
   collections/amazon-quicksight.postman_collection.json:
     method: derived
     evidence: openapi/amazon-quicksight
+  compliance/amazon-quicksight-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  components/amazon-quicksight-components.yml:
+    method: searched
+    evidence: declared in the artifact
+  conformance/amazon-quicksight-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-quicksight-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-quicksight-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-quicksight-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-quicksight-problem-types.yml:
+    method: searched
+    evidence: declared in the artifact
   examples/amazon-quicksight-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -65,6 +101,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-quicksight-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -86,6 +125,411 @@ artifacts:
   json-ld/amazon-quicksight-schema.json-context.jsonld:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-quicksight-batch-delete-knowledge-base-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-cancel-ingestion-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-cancel-ingestion-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-account-customization-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-account-customization-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-account-subscription-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-account-subscription-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-action-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-action-connector-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-agent-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-agent-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-analysis-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-analysis-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-approval-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-brand-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-brand-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-custom-permissions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-data-source-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-data-source-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-dlp-setting-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-dlp-setting-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-flow-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-folder-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-folder-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-group-membership-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-iampolicy-assignment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-iampolicy-assignment-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-ingestion-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-ingestion-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-knowledge-base-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-knowledge-base-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-namespace-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-namespace-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-oauth-client-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-oauth-client-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-role-membership-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-template-alias-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-create-theme-alias-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-account-subscription-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-analysis-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-analysis-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-app-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-app-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-brand-assignment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-brand-assignment-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-data-source-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-default-qbusiness-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-default-qbusiness-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-dlp-setting-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-group-membership-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-identity-propagation-config-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-identity-propagation-config-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-namespace-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-namespace-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-oauth-client-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-role-custom-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-role-membership-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-template-alias-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-delete-user-custom-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-account-customization-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-account-customization-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-account-subscription-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-analysis-definition-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-analysis-definition-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-app-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-app-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-asset-bundle-export-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-asset-bundle-export-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-asset-bundle-import-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-asset-bundle-import-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-automation-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-brand-assignment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-brand-assignment-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-brand-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-dashboard-definition-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-dashboard-definition-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-dashboard-snapshot-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-default-qbusiness-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-default-qbusiness-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-flow-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-namespace-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-namespace-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-role-custom-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-template-alias-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-template-definition-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-describe-template-definition-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-generate-embed-url-for-anonymous-user-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-generate-embed-url-for-anonymous-user-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-generate-embed-url-for-registered-user-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-generate-embed-url-for-registered-user-with-identity-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-get-dashboard-embed-url-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-get-dashboard-embed-url-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-get-flow-metadata-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-get-identity-context-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-get-session-embed-url-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-action-connectors-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-action-connectors-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-agents-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-agents-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-approval-policies-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-approval-policies-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-apps-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-apps-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-asset-bundle-export-jobs-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-asset-bundle-export-jobs-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-asset-bundle-import-jobs-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-asset-bundle-import-jobs-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-brands-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-brands-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-custom-permissions-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-data-sources-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-dlp-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-dlp-settings-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-flows-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-folders-for-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-folders-for-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-folders-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-folders-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-group-memberships-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-groups-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-iampolicy-assignments-for-user-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-iampolicy-assignments-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-identity-propagation-configs-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-identity-propagation-configs-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-ingestions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-ingestions-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-knowledge-bases-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-namespaces-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-namespaces-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-oauth-client-applications-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-role-memberships-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-list-user-groups-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-quicksight-openapi-dashboard-schema.json:
     method: unknown
     evidence: no authorship recorded
@@ -96,6 +540,141 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-quicksight-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-search-flows-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-search-flows-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-start-asset-bundle-export-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-start-asset-bundle-export-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-start-asset-bundle-import-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-start-asset-bundle-import-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-account-custom-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-account-customization-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-account-customization-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-action-connector-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-action-connector-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-agent-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-agent-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-analysis-permissions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-analysis-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-analysis-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-app-permissions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-approval-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-brand-assignment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-brand-assignment-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-brand-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-dashboard-permissions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-data-source-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-data-source-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-default-qbusiness-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-default-qbusiness-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-dlp-setting-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-flow-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-folder-permissions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-iampolicy-assignment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-iampolicy-assignment-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-identity-propagation-config-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-identity-propagation-config-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-knowledge-base-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-knowledge-base-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-oauth-client-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-oauth-client-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-resource-permissions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-role-custom-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-template-alias-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-theme-alias-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-topic-permissions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-topic-permissions-v2-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-quicksight-update-user-custom-permission-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-structure/amazon-quicksight-openapi-dashboard-structure.json:
@@ -113,7 +692,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -182,10 +761,21 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-quicksight-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-quicksight-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-quicksight-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-quicksight-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-quicksight-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/amazon-quicksight-account-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -226,8 +816,8 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-quicksight-dashboards-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-quicksight-data-loss-prevention-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -327,6 +917,12 @@ artifacts:
   openapi/amazon-quicksight-vpc-connections-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-quicksight-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-quicksight-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-quicksight-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -339,7 +935,13 @@ artifacts:
   rate-limits/amazon-quicksight-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
+  regulatory/amazon-quicksight-regulatory-posture.yml:
+    method: unknown
+    evidence: no authorship recorded
   rules/amazon-quicksight-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-quicksight-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-quicksight-spectral-rules.yml:
@@ -348,6 +950,9 @@ artifacts:
   security/amazon-quicksight-domain-security.yml:
     method: unknown
     evidence: no authorship recorded
+  security/amazon-quicksight-trust-center.yml:
+    method: searched
+    evidence: declared in the artifact
   security/amazon-quicksight-vulnerability-disclosure.yml:
     method: searched
     evidence: declared in the artifact
@@ -355,8 +960,30 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   smithy/quicksight-2018-04-01.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/quicksight/service/2018-04-01/quicksight-2018-04-01.json
+      (sha256 6fc2fff349d5, fetched 2026-11-11T21:14:08+00:00)
+  terms/amazon-quicksight-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-quicksight-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-quicksight-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-quicksight-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-quicksight-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-quicksight-quicksight-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-quicksight-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-quicksight-well-known.yml:
     method: unknown
     evidence: no authorship recorded
